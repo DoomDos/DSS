@@ -1,0 +1,281 @@
+﻿namespace WindowsFormsApplication1
+{
+    partial class FormTruong
+    {
+        /// <summary>
+        /// Required designer variable.
+        /// </summary>
+        private System.ComponentModel.IContainer components = null;
+
+        /// <summary>
+        /// Clean up any resources being used.
+        /// </summary>
+        /// <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        protected override void Dispose(bool disposing)
+        {
+            if (disposing && (components != null))
+            {
+                components.Dispose();
+            }
+            base.Dispose(disposing);
+        }
+
+        #region Windows Form Designer generated code
+
+        /// <summary>
+        /// Required method for Designer support - do not modify
+        /// the contents of this method with the code editor.
+        /// </summary>
+        private void InitializeComponent()
+        {
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormTruong));
+            this.panelButton = new System.Windows.Forms.Panel();
+            this.buttonDong = new System.Windows.Forms.Button();
+            this.buttonChitiet = new System.Windows.Forms.Button();
+            this.buttonXoa = new System.Windows.Forms.Button();
+            this.buttonSua = new System.Windows.Forms.Button();
+            this.buttonThem = new System.Windows.Forms.Button();
+            this.dataGridViewTruong = new System.Windows.Forms.DataGridView();
+            this.ColumnMaTruong = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ColumnTenTruong = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ColumnDiaChi = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ColumnWebsite = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ColumnBoQuanLy = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.labelTimKiem = new System.Windows.Forms.Label();
+            this.comboBoxTimKiem = new System.Windows.Forms.ComboBox();
+            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.buttonTimKiem = new System.Windows.Forms.Button();
+            this.panelButton.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewTruong)).BeginInit();
+            this.SuspendLayout();
+            // 
+            // panelButton
+            // 
+            this.panelButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(154)))), ((int)(((byte)(254)))), ((int)(((byte)(46)))));
+            this.panelButton.Controls.Add(this.buttonDong);
+            this.panelButton.Controls.Add(this.buttonChitiet);
+            this.panelButton.Controls.Add(this.buttonXoa);
+            this.panelButton.Controls.Add(this.buttonSua);
+            this.panelButton.Controls.Add(this.buttonThem);
+            this.panelButton.Location = new System.Drawing.Point(0, 390);
+            this.panelButton.Name = "panelButton";
+            this.panelButton.Size = new System.Drawing.Size(828, 71);
+            this.panelButton.TabIndex = 0;
+            // 
+            // buttonDong
+            // 
+            this.buttonDong.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.buttonDong.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonDong.Font = new System.Drawing.Font("Palatino Linotype", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonDong.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.buttonDong.Location = new System.Drawing.Point(582, 19);
+            this.buttonDong.Name = "buttonDong";
+            this.buttonDong.Size = new System.Drawing.Size(100, 40);
+            this.buttonDong.TabIndex = 4;
+            this.buttonDong.Text = "Đóng";
+            this.buttonDong.UseVisualStyleBackColor = false;
+            // 
+            // buttonChitiet
+            // 
+            this.buttonChitiet.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.buttonChitiet.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonChitiet.Font = new System.Drawing.Font("Palatino Linotype", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonChitiet.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.buttonChitiet.Location = new System.Drawing.Point(476, 19);
+            this.buttonChitiet.Name = "buttonChitiet";
+            this.buttonChitiet.Size = new System.Drawing.Size(100, 40);
+            this.buttonChitiet.TabIndex = 3;
+            this.buttonChitiet.Text = "Chi tiết";
+            this.buttonChitiet.UseVisualStyleBackColor = false;
+            this.buttonChitiet.Click += new System.EventHandler(this.buttonChitiet_Click);
+            // 
+            // buttonXoa
+            // 
+            this.buttonXoa.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.buttonXoa.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonXoa.Font = new System.Drawing.Font("Palatino Linotype", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonXoa.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.buttonXoa.Location = new System.Drawing.Point(370, 19);
+            this.buttonXoa.Name = "buttonXoa";
+            this.buttonXoa.Size = new System.Drawing.Size(100, 40);
+            this.buttonXoa.TabIndex = 2;
+            this.buttonXoa.Text = "Xóa";
+            this.buttonXoa.UseVisualStyleBackColor = false;
+            // 
+            // buttonSua
+            // 
+            this.buttonSua.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.buttonSua.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonSua.Font = new System.Drawing.Font("Palatino Linotype", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonSua.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.buttonSua.Location = new System.Drawing.Point(264, 19);
+            this.buttonSua.Name = "buttonSua";
+            this.buttonSua.Size = new System.Drawing.Size(100, 40);
+            this.buttonSua.TabIndex = 1;
+            this.buttonSua.Text = "Sửa";
+            this.buttonSua.UseVisualStyleBackColor = false;
+            // 
+            // buttonThem
+            // 
+            this.buttonThem.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.buttonThem.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonThem.Font = new System.Drawing.Font("Palatino Linotype", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonThem.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.buttonThem.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.buttonThem.Location = new System.Drawing.Point(158, 19);
+            this.buttonThem.Name = "buttonThem";
+            this.buttonThem.Size = new System.Drawing.Size(100, 40);
+            this.buttonThem.TabIndex = 0;
+            this.buttonThem.Text = "Thêm";
+            this.buttonThem.UseVisualStyleBackColor = false;
+            this.buttonThem.Click += new System.EventHandler(this.buttonThem_Click);
+            // 
+            // dataGridViewTruong
+            // 
+            this.dataGridViewTruong.AllowUserToAddRows = false;
+            this.dataGridViewTruong.AllowUserToDeleteRows = false;
+            this.dataGridViewTruong.AllowUserToOrderColumns = true;
+            this.dataGridViewTruong.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.dataGridViewTruong.BackgroundColor = System.Drawing.Color.White;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Palatino Linotype", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridViewTruong.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            this.dataGridViewTruong.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridViewTruong.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.ColumnMaTruong,
+            this.ColumnTenTruong,
+            this.ColumnDiaChi,
+            this.ColumnWebsite,
+            this.ColumnBoQuanLy});
+            this.dataGridViewTruong.GridColor = System.Drawing.Color.White;
+            this.dataGridViewTruong.Location = new System.Drawing.Point(12, 58);
+            this.dataGridViewTruong.Name = "dataGridViewTruong";
+            this.dataGridViewTruong.ReadOnly = true;
+            this.dataGridViewTruong.Size = new System.Drawing.Size(805, 326);
+            this.dataGridViewTruong.TabIndex = 1;
+            // 
+            // ColumnMaTruong
+            // 
+            this.ColumnMaTruong.HeaderText = "Mã Trường";
+            this.ColumnMaTruong.Name = "ColumnMaTruong";
+            this.ColumnMaTruong.ReadOnly = true;
+            // 
+            // ColumnTenTruong
+            // 
+            this.ColumnTenTruong.HeaderText = "Tên Trường";
+            this.ColumnTenTruong.Name = "ColumnTenTruong";
+            this.ColumnTenTruong.ReadOnly = true;
+            // 
+            // ColumnDiaChi
+            // 
+            this.ColumnDiaChi.HeaderText = "Địa Chỉ";
+            this.ColumnDiaChi.Name = "ColumnDiaChi";
+            this.ColumnDiaChi.ReadOnly = true;
+            // 
+            // ColumnWebsite
+            // 
+            this.ColumnWebsite.HeaderText = "Website";
+            this.ColumnWebsite.Name = "ColumnWebsite";
+            this.ColumnWebsite.ReadOnly = true;
+            // 
+            // ColumnBoQuanLy
+            // 
+            this.ColumnBoQuanLy.HeaderText = "Bộ Quản Lý";
+            this.ColumnBoQuanLy.Name = "ColumnBoQuanLy";
+            this.ColumnBoQuanLy.ReadOnly = true;
+            // 
+            // labelTimKiem
+            // 
+            this.labelTimKiem.AutoSize = true;
+            this.labelTimKiem.Font = new System.Drawing.Font("Palatino Linotype", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelTimKiem.ForeColor = System.Drawing.Color.White;
+            this.labelTimKiem.Location = new System.Drawing.Point(24, 17);
+            this.labelTimKiem.Name = "labelTimKiem";
+            this.labelTimKiem.Size = new System.Drawing.Size(100, 26);
+            this.labelTimKiem.TabIndex = 2;
+            this.labelTimKiem.Text = "Tìm kiếm";
+            // 
+            // comboBoxTimKiem
+            // 
+            this.comboBoxTimKiem.Font = new System.Drawing.Font("Palatino Linotype", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.comboBoxTimKiem.FormattingEnabled = true;
+            this.comboBoxTimKiem.Items.AddRange(new object[] {
+            "Mã Trường",
+            "Tên Trường"});
+            this.comboBoxTimKiem.Location = new System.Drawing.Point(130, 17);
+            this.comboBoxTimKiem.Name = "comboBoxTimKiem";
+            this.comboBoxTimKiem.Size = new System.Drawing.Size(165, 30);
+            this.comboBoxTimKiem.TabIndex = 3;
+            // 
+            // textBox1
+            // 
+            this.textBox1.Font = new System.Drawing.Font("Palatino Linotype", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox1.Location = new System.Drawing.Point(301, 17);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(349, 29);
+            this.textBox1.TabIndex = 4;
+            // 
+            // buttonTimKiem
+            // 
+            this.buttonTimKiem.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.buttonTimKiem.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonTimKiem.Font = new System.Drawing.Font("Palatino Linotype", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonTimKiem.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.buttonTimKiem.Location = new System.Drawing.Point(677, 12);
+            this.buttonTimKiem.Name = "buttonTimKiem";
+            this.buttonTimKiem.Size = new System.Drawing.Size(101, 35);
+            this.buttonTimKiem.TabIndex = 5;
+            this.buttonTimKiem.Text = "Tìm Kiếm";
+            this.buttonTimKiem.UseVisualStyleBackColor = false;
+            // 
+            // FormTruong
+            // 
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(154)))), ((int)(((byte)(254)))), ((int)(((byte)(46)))));
+            this.ClientSize = new System.Drawing.Size(829, 461);
+            this.Controls.Add(this.buttonTimKiem);
+            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.comboBoxTimKiem);
+            this.Controls.Add(this.labelTimKiem);
+            this.Controls.Add(this.dataGridViewTruong);
+            this.Controls.Add(this.panelButton);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.Name = "FormTruong";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
+            this.Text = "Thông tin các Trường";
+            this.panelButton.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewTruong)).EndInit();
+            this.ResumeLayout(false);
+            this.PerformLayout();
+
+        }
+
+        #endregion
+
+        private System.Windows.Forms.Panel panelButton;
+        private System.Windows.Forms.Button buttonDong;
+        private System.Windows.Forms.Button buttonChitiet;
+        private System.Windows.Forms.Button buttonXoa;
+        private System.Windows.Forms.Button buttonSua;
+        private System.Windows.Forms.Button buttonThem;
+        private System.Windows.Forms.DataGridView dataGridViewTruong;
+        private System.Windows.Forms.Label labelTimKiem;
+        private System.Windows.Forms.ComboBox comboBoxTimKiem;
+        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.Button buttonTimKiem;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ColumnMaTruong;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ColumnTenTruong;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ColumnDiaChi;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ColumnWebsite;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ColumnBoQuanLy;
+    }
+}
