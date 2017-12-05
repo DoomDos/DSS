@@ -28,5 +28,15 @@ namespace WindowsFormsApplication1
             var formTruongThem = new FormTruongThem();
             formTruongThem.ShowDialog();
         }
+
+        private void buttonDong_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void FormTruong_Load(object sender, EventArgs e)
+        {
+            comboBoxTimKiem.SelectedIndex = 0;
+        }
     }
 }

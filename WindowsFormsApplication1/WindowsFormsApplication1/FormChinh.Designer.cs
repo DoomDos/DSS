@@ -50,6 +50,7 @@
             this.buttonThoat.Text = "Thoát";
             this.buttonThoat.TextImageRelation = System.Windows.Forms.TextImageRelation.TextAboveImage;
             this.buttonThoat.UseVisualStyleBackColor = false;
+            this.buttonThoat.Click += new System.EventHandler(this.buttonThoat_Click);
             // 
             // buttonTruong
             // 

@@ -30,5 +30,10 @@ namespace WindowsFormsApplication1
             formTuVan.ShowDialog();
 
         }
+
+        private void buttonThoat_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
     }
 }

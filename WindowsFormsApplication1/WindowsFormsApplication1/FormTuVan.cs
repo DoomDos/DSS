@@ -16,5 +16,15 @@ namespace WindowsFormsApplication1
         {
             InitializeComponent();
         }
+
+        private void buttonDong_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void FormTuVan_Load(object sender, EventArgs e)
+        {
+            comboBoxTuVan.SelectedIndex = 0;
+        }
     }
 }

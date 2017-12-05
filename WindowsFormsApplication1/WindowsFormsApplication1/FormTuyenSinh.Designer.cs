@@ -72,6 +72,7 @@
             this.buttonDong.TabIndex = 4;
             this.buttonDong.Text = "Đóng";
             this.buttonDong.UseVisualStyleBackColor = false;
+            this.buttonDong.Click += new System.EventHandler(this.buttonDong_Click);
             // 
             // buttonXoa
             // 
@@ -173,6 +174,7 @@
             // 
             // comboBoxNam
             // 
+            this.comboBoxNam.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboBoxNam.Font = new System.Drawing.Font("Palatino Linotype", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.comboBoxNam.FormattingEnabled = true;
             this.comboBoxNam.Items.AddRange(new object[] {
@@ -228,6 +230,7 @@
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "FormTuyenSinh";
             this.Text = "Dữ liệu Tuyển sinh";
+            this.Load += new System.EventHandler(this.FormTuyenSinh_Load);
             this.panelButton.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);

@@ -75,6 +75,7 @@
             this.buttonDong.TabIndex = 4;
             this.buttonDong.Text = "Đóng";
             this.buttonDong.UseVisualStyleBackColor = false;
+            this.buttonDong.Click += new System.EventHandler(this.buttonDong_Click);
             // 
             // buttonChitiet
             // 
@@ -204,6 +205,7 @@
             // 
             // comboBoxTimKiem
             // 
+            this.comboBoxTimKiem.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboBoxTimKiem.Font = new System.Drawing.Font("Palatino Linotype", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.comboBoxTimKiem.FormattingEnabled = true;
             this.comboBoxTimKiem.Items.AddRange(new object[] {
@@ -252,6 +254,7 @@
             this.Name = "FormTruong";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "Thông tin các Trường";
+            this.Load += new System.EventHandler(this.FormTruong_Load);
             this.panelButton.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewTruong)).EndInit();
             this.ResumeLayout(false);

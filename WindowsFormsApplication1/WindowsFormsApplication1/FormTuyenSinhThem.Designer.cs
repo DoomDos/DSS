@@ -167,6 +167,7 @@
             this.buttonHuy.TabIndex = 14;
             this.buttonHuy.Text = "Hủy";
             this.buttonHuy.UseVisualStyleBackColor = false;
+            this.buttonHuy.Click += new System.EventHandler(this.buttonHuy_Click);
             // 
             // FormTuyenSinhThem
             // 

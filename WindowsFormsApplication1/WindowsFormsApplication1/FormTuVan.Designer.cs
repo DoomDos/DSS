@@ -41,6 +41,7 @@
             // 
             // comboBoxTuVan
             // 
+            this.comboBoxTuVan.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboBoxTuVan.Font = new System.Drawing.Font("Palatino Linotype", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.comboBoxTuVan.FormattingEnabled = true;
             this.comboBoxTuVan.Items.AddRange(new object[] {
@@ -125,6 +126,7 @@
             this.buttonDong.TabIndex = 7;
             this.buttonDong.Text = "Đóng";
             this.buttonDong.UseVisualStyleBackColor = false;
+            this.buttonDong.Click += new System.EventHandler(this.buttonDong_Click);
             // 
             // FormTuVan
             // 
@@ -144,6 +146,7 @@
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "FormTuVan";
             this.Text = "Tư vấn";
+            this.Load += new System.EventHandler(this.FormTuVan_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

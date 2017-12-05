@@ -22,5 +22,15 @@ namespace WindowsFormsApplication1
             var formTuyenSinhThem = new FormTuyenSinhThem();
             formTuyenSinhThem.ShowDialog();
         }
+
+        private void buttonDong_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void FormTuyenSinh_Load(object sender, EventArgs e)
+        {
+            comboBoxNam.SelectedIndex = 0;
+        }
     }
 }
