@@ -105,7 +105,9 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoValidate = System.Windows.Forms.AutoValidate.EnablePreventFocusChange;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(130)))), ((int)(((byte)(250)))), ((int)(((byte)(88)))));
+            this.CausesValidation = false;
             this.ClientSize = new System.Drawing.Size(757, 383);
             this.Controls.Add(this.labelMainForm);
             this.Controls.Add(this.buttonThoat);
@@ -114,6 +116,7 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "MainForm";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Phần mềm dự báo số lượng sinh viên Công nghệ Thông tin của các Trường Đại học";
             this.ResumeLayout(false);
 

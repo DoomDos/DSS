@@ -27,3 +27,5 @@ D:\DSS\WindowsFormsApplication1\WindowsFormsApplication1\obj\Debug\DSSver2.cspro
 D:\DSS\WindowsFormsApplication1\WindowsFormsApplication1\obj\Debug\DSSver2.csproj.CoreCompileInputs.cache
 D:\DSS\WindowsFormsApplication1\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.exe
 D:\DSS\WindowsFormsApplication1\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.pdb
+D:\DSS\WindowsFormsApplication1\WindowsFormsApplication1\bin\Debug\TuVanTuyenSinh.mdf
+D:\DSS\WindowsFormsApplication1\WindowsFormsApplication1\bin\Debug\TuVanTuyenSinh_log.ldf

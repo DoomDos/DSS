@@ -29,15 +29,15 @@
         private void InitializeComponent()
         {
             this.labelMaTruong = new System.Windows.Forms.Label();
-            this.textBoxMaTruong = new System.Windows.Forms.TextBox();
+            this.MaTruong = new System.Windows.Forms.TextBox();
             this.labelWebsite = new System.Windows.Forms.Label();
             this.labelTenTruong = new System.Windows.Forms.Label();
             this.labelDiaChi = new System.Windows.Forms.Label();
             this.labelBoQuanLy = new System.Windows.Forms.Label();
-            this.textBoxDiaChi = new System.Windows.Forms.TextBox();
-            this.textBoxWebsite = new System.Windows.Forms.TextBox();
-            this.textBoxBoQuanLy = new System.Windows.Forms.TextBox();
-            this.textBoxTenTruong = new System.Windows.Forms.TextBox();
+            this.DiaChi = new System.Windows.Forms.TextBox();
+            this.Website = new System.Windows.Forms.TextBox();
+            this.BQL = new System.Windows.Forms.TextBox();
+            this.TenTruong = new System.Windows.Forms.TextBox();
             this.buttonLuu = new System.Windows.Forms.Button();
             this.buttonHuy = new System.Windows.Forms.Button();
             this.SuspendLayout();
@@ -53,14 +53,14 @@
             this.labelMaTruong.TabIndex = 0;
             this.labelMaTruong.Text = "Mã Trường";
             // 
-            // textBoxMaTruong
+            // MaTruong
             // 
-            this.textBoxMaTruong.Font = new System.Drawing.Font("Palatino Linotype", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBoxMaTruong.ForeColor = System.Drawing.SystemColors.WindowText;
-            this.textBoxMaTruong.Location = new System.Drawing.Point(179, 32);
-            this.textBoxMaTruong.Name = "textBoxMaTruong";
-            this.textBoxMaTruong.Size = new System.Drawing.Size(386, 33);
-            this.textBoxMaTruong.TabIndex = 5;
+            this.MaTruong.Font = new System.Drawing.Font("Palatino Linotype", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.MaTruong.ForeColor = System.Drawing.SystemColors.WindowText;
+            this.MaTruong.Location = new System.Drawing.Point(179, 32);
+            this.MaTruong.Name = "MaTruong";
+            this.MaTruong.Size = new System.Drawing.Size(386, 33);
+            this.MaTruong.TabIndex = 5;
             // 
             // labelWebsite
             // 
@@ -106,41 +106,41 @@
             this.labelBoQuanLy.TabIndex = 13;
             this.labelBoQuanLy.Text = "Bộ quản lý";
             // 
-            // textBoxDiaChi
+            // DiaChi
             // 
-            this.textBoxDiaChi.Font = new System.Drawing.Font("Palatino Linotype", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBoxDiaChi.ForeColor = System.Drawing.SystemColors.WindowText;
-            this.textBoxDiaChi.Location = new System.Drawing.Point(179, 132);
-            this.textBoxDiaChi.Name = "textBoxDiaChi";
-            this.textBoxDiaChi.Size = new System.Drawing.Size(386, 33);
-            this.textBoxDiaChi.TabIndex = 14;
+            this.DiaChi.Font = new System.Drawing.Font("Palatino Linotype", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.DiaChi.ForeColor = System.Drawing.SystemColors.WindowText;
+            this.DiaChi.Location = new System.Drawing.Point(179, 132);
+            this.DiaChi.Name = "DiaChi";
+            this.DiaChi.Size = new System.Drawing.Size(386, 33);
+            this.DiaChi.TabIndex = 14;
             // 
-            // textBoxWebsite
+            // Website
             // 
-            this.textBoxWebsite.Font = new System.Drawing.Font("Palatino Linotype", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBoxWebsite.ForeColor = System.Drawing.SystemColors.WindowText;
-            this.textBoxWebsite.Location = new System.Drawing.Point(179, 182);
-            this.textBoxWebsite.Name = "textBoxWebsite";
-            this.textBoxWebsite.Size = new System.Drawing.Size(386, 33);
-            this.textBoxWebsite.TabIndex = 15;
+            this.Website.Font = new System.Drawing.Font("Palatino Linotype", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Website.ForeColor = System.Drawing.SystemColors.WindowText;
+            this.Website.Location = new System.Drawing.Point(179, 182);
+            this.Website.Name = "Website";
+            this.Website.Size = new System.Drawing.Size(386, 33);
+            this.Website.TabIndex = 15;
             // 
-            // textBoxBoQuanLy
+            // BQL
             // 
-            this.textBoxBoQuanLy.Font = new System.Drawing.Font("Palatino Linotype", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBoxBoQuanLy.ForeColor = System.Drawing.SystemColors.WindowText;
-            this.textBoxBoQuanLy.Location = new System.Drawing.Point(179, 232);
-            this.textBoxBoQuanLy.Name = "textBoxBoQuanLy";
-            this.textBoxBoQuanLy.Size = new System.Drawing.Size(386, 33);
-            this.textBoxBoQuanLy.TabIndex = 16;
+            this.BQL.Font = new System.Drawing.Font("Palatino Linotype", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BQL.ForeColor = System.Drawing.SystemColors.WindowText;
+            this.BQL.Location = new System.Drawing.Point(179, 232);
+            this.BQL.Name = "BQL";
+            this.BQL.Size = new System.Drawing.Size(386, 33);
+            this.BQL.TabIndex = 16;
             // 
-            // textBoxTenTruong
+            // TenTruong
             // 
-            this.textBoxTenTruong.Font = new System.Drawing.Font("Palatino Linotype", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBoxTenTruong.ForeColor = System.Drawing.SystemColors.WindowText;
-            this.textBoxTenTruong.Location = new System.Drawing.Point(179, 82);
-            this.textBoxTenTruong.Name = "textBoxTenTruong";
-            this.textBoxTenTruong.Size = new System.Drawing.Size(386, 33);
-            this.textBoxTenTruong.TabIndex = 17;
+            this.TenTruong.Font = new System.Drawing.Font("Palatino Linotype", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TenTruong.ForeColor = System.Drawing.SystemColors.WindowText;
+            this.TenTruong.Location = new System.Drawing.Point(179, 82);
+            this.TenTruong.Name = "TenTruong";
+            this.TenTruong.Size = new System.Drawing.Size(386, 33);
+            this.TenTruong.TabIndex = 17;
             // 
             // buttonLuu
             // 
@@ -177,15 +177,15 @@
             this.ClientSize = new System.Drawing.Size(618, 344);
             this.Controls.Add(this.buttonHuy);
             this.Controls.Add(this.buttonLuu);
-            this.Controls.Add(this.textBoxTenTruong);
-            this.Controls.Add(this.textBoxBoQuanLy);
-            this.Controls.Add(this.textBoxWebsite);
-            this.Controls.Add(this.textBoxDiaChi);
+            this.Controls.Add(this.TenTruong);
+            this.Controls.Add(this.BQL);
+            this.Controls.Add(this.Website);
+            this.Controls.Add(this.DiaChi);
             this.Controls.Add(this.labelBoQuanLy);
             this.Controls.Add(this.labelDiaChi);
             this.Controls.Add(this.labelTenTruong);
             this.Controls.Add(this.labelWebsite);
-            this.Controls.Add(this.textBoxMaTruong);
+            this.Controls.Add(this.MaTruong);
             this.Controls.Add(this.labelMaTruong);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "FormTruongThem";
@@ -199,15 +199,15 @@
         #endregion
 
         private System.Windows.Forms.Label labelMaTruong;
-        private System.Windows.Forms.TextBox textBoxMaTruong;
+        private System.Windows.Forms.TextBox MaTruong;
         private System.Windows.Forms.Label labelWebsite;
         private System.Windows.Forms.Label labelTenTruong;
         private System.Windows.Forms.Label labelDiaChi;
         private System.Windows.Forms.Label labelBoQuanLy;
-        private System.Windows.Forms.TextBox textBoxDiaChi;
-        private System.Windows.Forms.TextBox textBoxWebsite;
-        private System.Windows.Forms.TextBox textBoxBoQuanLy;
-        private System.Windows.Forms.TextBox textBoxTenTruong;
+        private System.Windows.Forms.TextBox DiaChi;
+        private System.Windows.Forms.TextBox Website;
+        private System.Windows.Forms.TextBox BQL;
+        private System.Windows.Forms.TextBox TenTruong;
         private System.Windows.Forms.Button buttonLuu;
         private System.Windows.Forms.Button buttonHuy;
     }

@@ -33,11 +33,11 @@
             this.labelNam = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.labelTenTruong = new System.Windows.Forms.Label();
-            this.textBoxChiTieu = new System.Windows.Forms.TextBox();
-            this.textBoxNam = new System.Windows.Forms.TextBox();
-            this.textBoxDaTuyen = new System.Windows.Forms.TextBox();
-            this.comboBoxTenTruong = new System.Windows.Forms.ComboBox();
-            this.comboBoxMaTruong = new System.Windows.Forms.ComboBox();
+            this.ChiTieu = new System.Windows.Forms.TextBox();
+            this.Nam = new System.Windows.Forms.TextBox();
+            this.DaTuyen = new System.Windows.Forms.TextBox();
+            this.TenTruong = new System.Windows.Forms.ComboBox();
+            this.MaTruong = new System.Windows.Forms.ComboBox();
             this.buttonLuu = new System.Windows.Forms.Button();
             this.buttonHuy = new System.Windows.Forms.Button();
             this.SuspendLayout();
@@ -97,50 +97,50 @@
             this.labelTenTruong.TabIndex = 5;
             this.labelTenTruong.Text = "Tên Trường";
             // 
-            // textBoxChiTieu
+            // ChiTieu
             // 
-            this.textBoxChiTieu.Font = new System.Drawing.Font("Palatino Linotype", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBoxChiTieu.ForeColor = System.Drawing.SystemColors.WindowText;
-            this.textBoxChiTieu.Location = new System.Drawing.Point(183, 187);
-            this.textBoxChiTieu.Name = "textBoxChiTieu";
-            this.textBoxChiTieu.Size = new System.Drawing.Size(386, 33);
-            this.textBoxChiTieu.TabIndex = 7;
+            this.ChiTieu.Font = new System.Drawing.Font("Palatino Linotype", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ChiTieu.ForeColor = System.Drawing.SystemColors.WindowText;
+            this.ChiTieu.Location = new System.Drawing.Point(183, 187);
+            this.ChiTieu.Name = "ChiTieu";
+            this.ChiTieu.Size = new System.Drawing.Size(386, 33);
+            this.ChiTieu.TabIndex = 7;
             // 
-            // textBoxNam
+            // Nam
             // 
-            this.textBoxNam.Font = new System.Drawing.Font("Palatino Linotype", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBoxNam.ForeColor = System.Drawing.SystemColors.WindowText;
-            this.textBoxNam.Location = new System.Drawing.Point(183, 137);
-            this.textBoxNam.Name = "textBoxNam";
-            this.textBoxNam.Size = new System.Drawing.Size(386, 33);
-            this.textBoxNam.TabIndex = 8;
+            this.Nam.Font = new System.Drawing.Font("Palatino Linotype", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Nam.ForeColor = System.Drawing.SystemColors.WindowText;
+            this.Nam.Location = new System.Drawing.Point(183, 137);
+            this.Nam.Name = "Nam";
+            this.Nam.Size = new System.Drawing.Size(386, 33);
+            this.Nam.TabIndex = 8;
             // 
-            // textBoxDaTuyen
+            // DaTuyen
             // 
-            this.textBoxDaTuyen.Font = new System.Drawing.Font("Palatino Linotype", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBoxDaTuyen.ForeColor = System.Drawing.SystemColors.WindowText;
-            this.textBoxDaTuyen.Location = new System.Drawing.Point(183, 237);
-            this.textBoxDaTuyen.Name = "textBoxDaTuyen";
-            this.textBoxDaTuyen.Size = new System.Drawing.Size(386, 33);
-            this.textBoxDaTuyen.TabIndex = 10;
+            this.DaTuyen.Font = new System.Drawing.Font("Palatino Linotype", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.DaTuyen.ForeColor = System.Drawing.SystemColors.WindowText;
+            this.DaTuyen.Location = new System.Drawing.Point(183, 237);
+            this.DaTuyen.Name = "DaTuyen";
+            this.DaTuyen.Size = new System.Drawing.Size(386, 33);
+            this.DaTuyen.TabIndex = 10;
             // 
-            // comboBoxTenTruong
+            // TenTruong
             // 
-            this.comboBoxTenTruong.Font = new System.Drawing.Font("Palatino Linotype", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.comboBoxTenTruong.FormattingEnabled = true;
-            this.comboBoxTenTruong.Location = new System.Drawing.Point(183, 37);
-            this.comboBoxTenTruong.Name = "comboBoxTenTruong";
-            this.comboBoxTenTruong.Size = new System.Drawing.Size(386, 34);
-            this.comboBoxTenTruong.TabIndex = 11;
+            this.TenTruong.Font = new System.Drawing.Font("Palatino Linotype", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TenTruong.FormattingEnabled = true;
+            this.TenTruong.Location = new System.Drawing.Point(183, 37);
+            this.TenTruong.Name = "TenTruong";
+            this.TenTruong.Size = new System.Drawing.Size(386, 34);
+            this.TenTruong.TabIndex = 11;
             // 
-            // comboBoxMaTruong
+            // MaTruong
             // 
-            this.comboBoxMaTruong.Font = new System.Drawing.Font("Palatino Linotype", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.comboBoxMaTruong.FormattingEnabled = true;
-            this.comboBoxMaTruong.Location = new System.Drawing.Point(183, 87);
-            this.comboBoxMaTruong.Name = "comboBoxMaTruong";
-            this.comboBoxMaTruong.Size = new System.Drawing.Size(386, 34);
-            this.comboBoxMaTruong.TabIndex = 12;
+            this.MaTruong.Font = new System.Drawing.Font("Palatino Linotype", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.MaTruong.FormattingEnabled = true;
+            this.MaTruong.Location = new System.Drawing.Point(183, 87);
+            this.MaTruong.Name = "MaTruong";
+            this.MaTruong.Size = new System.Drawing.Size(386, 34);
+            this.MaTruong.TabIndex = 12;
             // 
             // buttonLuu
             // 
@@ -177,11 +177,11 @@
             this.ClientSize = new System.Drawing.Size(617, 357);
             this.Controls.Add(this.buttonHuy);
             this.Controls.Add(this.buttonLuu);
-            this.Controls.Add(this.comboBoxMaTruong);
-            this.Controls.Add(this.comboBoxTenTruong);
-            this.Controls.Add(this.textBoxDaTuyen);
-            this.Controls.Add(this.textBoxNam);
-            this.Controls.Add(this.textBoxChiTieu);
+            this.Controls.Add(this.MaTruong);
+            this.Controls.Add(this.TenTruong);
+            this.Controls.Add(this.DaTuyen);
+            this.Controls.Add(this.Nam);
+            this.Controls.Add(this.ChiTieu);
             this.Controls.Add(this.labelTenTruong);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.labelNam);
@@ -203,11 +203,11 @@
         private System.Windows.Forms.Label labelNam;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label labelTenTruong;
-        private System.Windows.Forms.TextBox textBoxChiTieu;
-        private System.Windows.Forms.TextBox textBoxNam;
-        private System.Windows.Forms.TextBox textBoxDaTuyen;
-        private System.Windows.Forms.ComboBox comboBoxTenTruong;
-        private System.Windows.Forms.ComboBox comboBoxMaTruong;
+        private System.Windows.Forms.TextBox ChiTieu;
+        private System.Windows.Forms.TextBox Nam;
+        private System.Windows.Forms.TextBox DaTuyen;
+        private System.Windows.Forms.ComboBox TenTruong;
+        private System.Windows.Forms.ComboBox MaTruong;
         private System.Windows.Forms.Button buttonLuu;
         private System.Windows.Forms.Button buttonHuy;
     }
