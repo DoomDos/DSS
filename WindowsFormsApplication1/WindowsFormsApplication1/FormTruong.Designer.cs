@@ -37,11 +37,11 @@
             this.buttonSua = new System.Windows.Forms.Button();
             this.buttonThem = new System.Windows.Forms.Button();
             this.dataGridViewTruong = new System.Windows.Forms.DataGridView();
-            this.ColumnMaTruong = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ColumnTenTruong = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ColumnDiaChi = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ColumnWebsite = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ColumnBoQuanLy = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.MaTruong = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.TenTruong = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.DiaChi = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Website = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.BQL = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.labelTimKiem = new System.Windows.Forms.Label();
             this.comboBoxTimKiem = new System.Windows.Forms.ComboBox();
             this.textBox1 = new System.Windows.Forms.TextBox();
@@ -139,6 +139,7 @@
             this.dataGridViewTruong.AllowUserToOrderColumns = true;
             this.dataGridViewTruong.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.dataGridViewTruong.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.DisplayedCells;
             this.dataGridViewTruong.BackgroundColor = System.Drawing.Color.White;
             dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle1.BackColor = System.Drawing.Color.White;
@@ -150,47 +151,59 @@
             this.dataGridViewTruong.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.dataGridViewTruong.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridViewTruong.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.ColumnMaTruong,
-            this.ColumnTenTruong,
-            this.ColumnDiaChi,
-            this.ColumnWebsite,
-            this.ColumnBoQuanLy});
+            this.MaTruong,
+            this.TenTruong,
+            this.DiaChi,
+            this.Website,
+            this.BQL});
             this.dataGridViewTruong.GridColor = System.Drawing.Color.White;
             this.dataGridViewTruong.Location = new System.Drawing.Point(12, 58);
             this.dataGridViewTruong.Name = "dataGridViewTruong";
             this.dataGridViewTruong.ReadOnly = true;
+            this.dataGridViewTruong.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            this.dataGridViewTruong.RowHeadersVisible = false;
             this.dataGridViewTruong.Size = new System.Drawing.Size(805, 326);
             this.dataGridViewTruong.TabIndex = 1;
             // 
-            // ColumnMaTruong
+            // MaTruong
             // 
-            this.ColumnMaTruong.HeaderText = "Mã Trường";
-            this.ColumnMaTruong.Name = "ColumnMaTruong";
-            this.ColumnMaTruong.ReadOnly = true;
+            this.MaTruong.DataPropertyName = "MaTruong";
+            this.MaTruong.HeaderText = "Mã Trường";
+            this.MaTruong.Name = "MaTruong";
+            this.MaTruong.ReadOnly = true;
+            this.MaTruong.Width = 120;
             // 
-            // ColumnTenTruong
+            // TenTruong
             // 
-            this.ColumnTenTruong.HeaderText = "Tên Trường";
-            this.ColumnTenTruong.Name = "ColumnTenTruong";
-            this.ColumnTenTruong.ReadOnly = true;
+            this.TenTruong.DataPropertyName = "TenTruong";
+            this.TenTruong.HeaderText = "Tên Trường";
+            this.TenTruong.Name = "TenTruong";
+            this.TenTruong.ReadOnly = true;
+            this.TenTruong.Width = 124;
             // 
-            // ColumnDiaChi
+            // DiaChi
             // 
-            this.ColumnDiaChi.HeaderText = "Địa Chỉ";
-            this.ColumnDiaChi.Name = "ColumnDiaChi";
-            this.ColumnDiaChi.ReadOnly = true;
+            this.DiaChi.DataPropertyName = "DiaChi";
+            this.DiaChi.HeaderText = "Địa Chỉ";
+            this.DiaChi.Name = "DiaChi";
+            this.DiaChi.ReadOnly = true;
+            this.DiaChi.Width = 92;
             // 
-            // ColumnWebsite
+            // Website
             // 
-            this.ColumnWebsite.HeaderText = "Website";
-            this.ColumnWebsite.Name = "ColumnWebsite";
-            this.ColumnWebsite.ReadOnly = true;
+            this.Website.DataPropertyName = "Website";
+            this.Website.HeaderText = "Website";
+            this.Website.Name = "Website";
+            this.Website.ReadOnly = true;
+            this.Website.Width = 94;
             // 
-            // ColumnBoQuanLy
+            // BQL
             // 
-            this.ColumnBoQuanLy.HeaderText = "Bộ Quản Lý";
-            this.ColumnBoQuanLy.Name = "ColumnBoQuanLy";
-            this.ColumnBoQuanLy.ReadOnly = true;
+            this.BQL.DataPropertyName = "BQL";
+            this.BQL.HeaderText = "Bộ Quản Lý";
+            this.BQL.Name = "BQL";
+            this.BQL.ReadOnly = true;
+            this.BQL.Width = 123;
             // 
             // labelTimKiem
             // 
@@ -275,10 +288,10 @@
         private System.Windows.Forms.ComboBox comboBoxTimKiem;
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.Button buttonTimKiem;
-        private System.Windows.Forms.DataGridViewTextBoxColumn ColumnMaTruong;
-        private System.Windows.Forms.DataGridViewTextBoxColumn ColumnTenTruong;
-        private System.Windows.Forms.DataGridViewTextBoxColumn ColumnDiaChi;
-        private System.Windows.Forms.DataGridViewTextBoxColumn ColumnWebsite;
-        private System.Windows.Forms.DataGridViewTextBoxColumn ColumnBoQuanLy;
+        private System.Windows.Forms.DataGridViewTextBoxColumn MaTruong;
+        private System.Windows.Forms.DataGridViewTextBoxColumn TenTruong;
+        private System.Windows.Forms.DataGridViewTextBoxColumn DiaChi;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Website;
+        private System.Windows.Forms.DataGridViewTextBoxColumn BQL;
     }
 }

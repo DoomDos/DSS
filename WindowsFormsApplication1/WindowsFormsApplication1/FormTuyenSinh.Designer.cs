@@ -35,17 +35,17 @@
             this.buttonXoa = new System.Windows.Forms.Button();
             this.buttonSua = new System.Windows.Forms.Button();
             this.buttonThem = new System.Windows.Forms.Button();
-            this.ColumnDaTuyen = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ColumnChiTieuTuyenSinh = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ColumnNam = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ColumnMaTruong = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ColumnTenTruong = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.dataGridViewTS = new System.Windows.Forms.DataGridView();
+            this.TenTruong = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.MaTruong = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Nam = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ChiTieu = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.SLDaTuyen = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.comboBoxNam = new System.Windows.Forms.ComboBox();
             this.labelNam = new System.Windows.Forms.Label();
             this.buttonNam = new System.Windows.Forms.Button();
             this.panelButton.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewTS)).BeginInit();
             this.SuspendLayout();
             // 
             // panelButton
@@ -115,42 +115,13 @@
             this.buttonThem.UseVisualStyleBackColor = false;
             this.buttonThem.Click += new System.EventHandler(this.buttonThem_Click);
             // 
-            // ColumnDaTuyen
+            // dataGridViewTS
             // 
-            this.ColumnDaTuyen.HeaderText = "Đã Tuyển";
-            this.ColumnDaTuyen.Name = "ColumnDaTuyen";
-            this.ColumnDaTuyen.ReadOnly = true;
-            // 
-            // ColumnChiTieuTuyenSinh
-            // 
-            this.ColumnChiTieuTuyenSinh.HeaderText = "Chỉ tiêu tuyển sinh";
-            this.ColumnChiTieuTuyenSinh.Name = "ColumnChiTieuTuyenSinh";
-            this.ColumnChiTieuTuyenSinh.ReadOnly = true;
-            // 
-            // ColumnNam
-            // 
-            this.ColumnNam.HeaderText = "Năm";
-            this.ColumnNam.Name = "ColumnNam";
-            this.ColumnNam.ReadOnly = true;
-            // 
-            // ColumnMaTruong
-            // 
-            this.ColumnMaTruong.HeaderText = "Mã Trường";
-            this.ColumnMaTruong.Name = "ColumnMaTruong";
-            this.ColumnMaTruong.ReadOnly = true;
-            // 
-            // ColumnTenTruong
-            // 
-            this.ColumnTenTruong.HeaderText = "Tên Trường";
-            this.ColumnTenTruong.Name = "ColumnTenTruong";
-            this.ColumnTenTruong.ReadOnly = true;
-            // 
-            // dataGridView1
-            // 
-            this.dataGridView1.AllowUserToAddRows = false;
-            this.dataGridView1.AllowUserToDeleteRows = false;
-            this.dataGridView1.AllowUserToOrderColumns = true;
-            this.dataGridView1.BackgroundColor = System.Drawing.Color.White;
+            this.dataGridViewTS.AllowUserToAddRows = false;
+            this.dataGridViewTS.AllowUserToDeleteRows = false;
+            this.dataGridViewTS.AllowUserToOrderColumns = true;
+            this.dataGridViewTS.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.DisplayedCells;
+            this.dataGridViewTS.BackgroundColor = System.Drawing.Color.White;
             dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
             dataGridViewCellStyle1.Font = new System.Drawing.Font("Palatino Linotype", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -158,19 +129,61 @@
             dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
             dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.ColumnTenTruong,
-            this.ColumnMaTruong,
-            this.ColumnNam,
-            this.ColumnChiTieuTuyenSinh,
-            this.ColumnDaTuyen});
-            this.dataGridView1.Location = new System.Drawing.Point(12, 68);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.ReadOnly = true;
-            this.dataGridView1.Size = new System.Drawing.Size(805, 318);
-            this.dataGridView1.TabIndex = 2;
+            this.dataGridViewTS.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            this.dataGridViewTS.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridViewTS.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.TenTruong,
+            this.MaTruong,
+            this.Nam,
+            this.ChiTieu,
+            this.SLDaTuyen});
+            this.dataGridViewTS.Location = new System.Drawing.Point(12, 68);
+            this.dataGridViewTS.Name = "dataGridViewTS";
+            this.dataGridViewTS.ReadOnly = true;
+            this.dataGridViewTS.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            this.dataGridViewTS.RowHeadersVisible = false;
+            this.dataGridViewTS.Size = new System.Drawing.Size(805, 318);
+            this.dataGridViewTS.TabIndex = 2;
+            // 
+            // TenTruong
+            // 
+            this.TenTruong.DataPropertyName = "TenTruong";
+            this.TenTruong.HeaderText = "Tên Trường";
+            this.TenTruong.Name = "TenTruong";
+            this.TenTruong.ReadOnly = true;
+            this.TenTruong.Width = 114;
+            // 
+            // MaTruong
+            // 
+            this.MaTruong.DataPropertyName = "MaTruong";
+            this.MaTruong.HeaderText = "Mã Trường";
+            this.MaTruong.Name = "MaTruong";
+            this.MaTruong.ReadOnly = true;
+            this.MaTruong.Width = 110;
+            // 
+            // Nam
+            // 
+            this.Nam.DataPropertyName = "Nam";
+            this.Nam.HeaderText = "Năm";
+            this.Nam.Name = "Nam";
+            this.Nam.ReadOnly = true;
+            this.Nam.Width = 71;
+            // 
+            // ChiTieu
+            // 
+            this.ChiTieu.DataPropertyName = "ChiTieu";
+            this.ChiTieu.HeaderText = "Chỉ tiêu tuyển sinh";
+            this.ChiTieu.Name = "ChiTieu";
+            this.ChiTieu.ReadOnly = true;
+            this.ChiTieu.Width = 133;
+            // 
+            // SLDaTuyen
+            // 
+            this.SLDaTuyen.DataPropertyName = "SLDaTuyen";
+            this.SLDaTuyen.HeaderText = "Đã Tuyển";
+            this.SLDaTuyen.Name = "SLDaTuyen";
+            this.SLDaTuyen.ReadOnly = true;
+            this.SLDaTuyen.Width = 98;
             // 
             // comboBoxNam
             // 
@@ -224,7 +237,7 @@
             this.Controls.Add(this.buttonNam);
             this.Controls.Add(this.labelNam);
             this.Controls.Add(this.comboBoxNam);
-            this.Controls.Add(this.dataGridView1);
+            this.Controls.Add(this.dataGridViewTS);
             this.Controls.Add(this.panelButton);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
@@ -232,7 +245,7 @@
             this.Text = "Dữ liệu Tuyển sinh";
             this.Load += new System.EventHandler(this.FormTuyenSinh_Load);
             this.panelButton.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewTS)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -245,14 +258,14 @@
         private System.Windows.Forms.Button buttonXoa;
         private System.Windows.Forms.Button buttonSua;
         private System.Windows.Forms.Button buttonThem;
-        private System.Windows.Forms.DataGridViewTextBoxColumn ColumnDaTuyen;
-        private System.Windows.Forms.DataGridViewTextBoxColumn ColumnChiTieuTuyenSinh;
-        private System.Windows.Forms.DataGridViewTextBoxColumn ColumnNam;
-        private System.Windows.Forms.DataGridViewTextBoxColumn ColumnMaTruong;
-        private System.Windows.Forms.DataGridViewTextBoxColumn ColumnTenTruong;
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridView dataGridViewTS;
         private System.Windows.Forms.ComboBox comboBoxNam;
         private System.Windows.Forms.Label labelNam;
         private System.Windows.Forms.Button buttonNam;
+        private System.Windows.Forms.DataGridViewTextBoxColumn TenTruong;
+        private System.Windows.Forms.DataGridViewTextBoxColumn MaTruong;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Nam;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ChiTieu;
+        private System.Windows.Forms.DataGridViewTextBoxColumn SLDaTuyen;
     }
 }
