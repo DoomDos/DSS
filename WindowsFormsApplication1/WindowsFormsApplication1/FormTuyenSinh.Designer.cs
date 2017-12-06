@@ -86,6 +86,7 @@
             this.buttonXoa.TabIndex = 2;
             this.buttonXoa.Text = "Xóa";
             this.buttonXoa.UseVisualStyleBackColor = false;
+            this.buttonXoa.Click += new System.EventHandler(this.buttonXoa_Click);
             // 
             // buttonSua
             // 
@@ -191,9 +192,7 @@
             this.comboBoxNam.Font = new System.Drawing.Font("Palatino Linotype", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.comboBoxNam.FormattingEnabled = true;
             this.comboBoxNam.Items.AddRange(new object[] {
-            "2010",
-            "2011",
-            "2012",
+            "",
             "2013",
             "2014",
             "2015",
@@ -203,6 +202,7 @@
             this.comboBoxNam.Name = "comboBoxNam";
             this.comboBoxNam.Size = new System.Drawing.Size(121, 30);
             this.comboBoxNam.TabIndex = 3;
+            this.comboBoxNam.SelectedIndexChanged += new System.EventHandler(this.comboBoxNam_SelectedIndexChanged);
             // 
             // labelNam
             // 
