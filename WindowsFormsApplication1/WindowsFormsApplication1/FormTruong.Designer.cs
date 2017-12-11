@@ -44,7 +44,7 @@
             this.BQL = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.labelTimKiem = new System.Windows.Forms.Label();
             this.comboBoxTimKiem = new System.Windows.Forms.ComboBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.textBoxTimKiem = new System.Windows.Forms.TextBox();
             this.buttonTimKiem = new System.Windows.Forms.Button();
             this.panelButton.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewTruong)).BeginInit();
@@ -103,6 +103,7 @@
             this.buttonXoa.TabIndex = 2;
             this.buttonXoa.Text = "Xóa";
             this.buttonXoa.UseVisualStyleBackColor = false;
+            this.buttonXoa.Click += new System.EventHandler(this.buttonXoa_Click);
             // 
             // buttonSua
             // 
@@ -116,6 +117,7 @@
             this.buttonSua.TabIndex = 1;
             this.buttonSua.Text = "Sửa";
             this.buttonSua.UseVisualStyleBackColor = false;
+            this.buttonSua.Click += new System.EventHandler(this.buttonSua_Click);
             // 
             // buttonThem
             // 
@@ -162,6 +164,7 @@
             this.dataGridViewTruong.ReadOnly = true;
             this.dataGridViewTruong.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
             this.dataGridViewTruong.RowHeadersVisible = false;
+            this.dataGridViewTruong.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dataGridViewTruong.Size = new System.Drawing.Size(805, 326);
             this.dataGridViewTruong.TabIndex = 1;
             // 
@@ -229,13 +232,13 @@
             this.comboBoxTimKiem.Size = new System.Drawing.Size(165, 30);
             this.comboBoxTimKiem.TabIndex = 3;
             // 
-            // textBox1
+            // textBoxTimKiem
             // 
-            this.textBox1.Font = new System.Drawing.Font("Palatino Linotype", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox1.Location = new System.Drawing.Point(301, 17);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(349, 29);
-            this.textBox1.TabIndex = 4;
+            this.textBoxTimKiem.Font = new System.Drawing.Font("Palatino Linotype", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBoxTimKiem.Location = new System.Drawing.Point(301, 17);
+            this.textBoxTimKiem.Name = "textBoxTimKiem";
+            this.textBoxTimKiem.Size = new System.Drawing.Size(349, 29);
+            this.textBoxTimKiem.TabIndex = 4;
             // 
             // buttonTimKiem
             // 
@@ -249,6 +252,7 @@
             this.buttonTimKiem.TabIndex = 5;
             this.buttonTimKiem.Text = "Tìm Kiếm";
             this.buttonTimKiem.UseVisualStyleBackColor = false;
+            this.buttonTimKiem.Click += new System.EventHandler(this.buttonTimKiem_Click);
             // 
             // FormTruong
             // 
@@ -257,7 +261,7 @@
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(154)))), ((int)(((byte)(254)))), ((int)(((byte)(46)))));
             this.ClientSize = new System.Drawing.Size(829, 461);
             this.Controls.Add(this.buttonTimKiem);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.textBoxTimKiem);
             this.Controls.Add(this.comboBoxTimKiem);
             this.Controls.Add(this.labelTimKiem);
             this.Controls.Add(this.dataGridViewTruong);
@@ -286,7 +290,7 @@
         private System.Windows.Forms.DataGridView dataGridViewTruong;
         private System.Windows.Forms.Label labelTimKiem;
         private System.Windows.Forms.ComboBox comboBoxTimKiem;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox textBoxTimKiem;
         private System.Windows.Forms.Button buttonTimKiem;
         private System.Windows.Forms.DataGridViewTextBoxColumn MaTruong;
         private System.Windows.Forms.DataGridViewTextBoxColumn TenTruong;

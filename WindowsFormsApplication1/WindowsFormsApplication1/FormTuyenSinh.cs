@@ -19,7 +19,7 @@ namespace WindowsFormsApplication1
             this.id = id;
         }
         string id;
-        SqlConnection con = new SqlConnection(@"Data Source=DESKTOP-38C3K9H\SQLEXPRESS;Initial Catalog=TuVanTuyenSinh;Integrated Security=True");
+        SqlConnection con = conStr.GetDBConnection();
         private void ketnoicsdl(string id)
         {
             con.Open();
@@ -60,7 +60,7 @@ namespace WindowsFormsApplication1
         private void comboBoxNam_SelectedIndexChanged(object sender, EventArgs e)
         {
             string nam = comboBoxNam.GetItemText(comboBoxNam.SelectedItem);
-            if (nam != "")
+            if (nam != "Tất cả")
             {      
                 con.Open();
                 string sql = "select Truong.TenTruong, TuyenSinh.* from Truong,TuyenSinh where TuyenSinh.Nam='" + nam + "' AND Truong.MaTruong='" + id + "' AND TuyenSinh.MaTruong='" + id + "'";  // lay het du lieu trong bang tuyen sinh và truong
