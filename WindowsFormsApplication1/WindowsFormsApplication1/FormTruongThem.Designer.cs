@@ -144,7 +144,7 @@
             // 
             // buttonLuu
             // 
-            this.buttonLuu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.buttonLuu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(122)))), ((int)(((byte)(153)))));
             this.buttonLuu.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonLuu.Font = new System.Drawing.Font("Palatino Linotype", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonLuu.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
@@ -158,7 +158,7 @@
             // 
             // buttonHuy
             // 
-            this.buttonHuy.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.buttonHuy.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(122)))), ((int)(((byte)(153)))));
             this.buttonHuy.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonHuy.Font = new System.Drawing.Font("Palatino Linotype", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonHuy.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
@@ -174,8 +174,8 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(154)))), ((int)(((byte)(254)))), ((int)(((byte)(46)))));
-            this.ClientSize = new System.Drawing.Size(618, 344);
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
+            this.ClientSize = new System.Drawing.Size(620, 350);
             this.Controls.Add(this.buttonHuy);
             this.Controls.Add(this.buttonLuu);
             this.Controls.Add(this.TenTruong);

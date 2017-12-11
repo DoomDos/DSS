@@ -49,23 +49,23 @@
             // 
             // panelButton
             // 
-            this.panelButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(154)))), ((int)(((byte)(254)))), ((int)(((byte)(46)))));
+            this.panelButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(204)))), ((int)(((byte)(255)))));
             this.panelButton.Controls.Add(this.buttonDong);
             this.panelButton.Controls.Add(this.buttonXoa);
             this.panelButton.Controls.Add(this.buttonSua);
             this.panelButton.Controls.Add(this.buttonThem);
-            this.panelButton.Location = new System.Drawing.Point(0, 392);
+            this.panelButton.Location = new System.Drawing.Point(12, 448);
             this.panelButton.Name = "panelButton";
-            this.panelButton.Size = new System.Drawing.Size(828, 71);
+            this.panelButton.Size = new System.Drawing.Size(996, 71);
             this.panelButton.TabIndex = 1;
             // 
             // buttonDong
             // 
-            this.buttonDong.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(46)))), ((int)(((byte)(254)))));
+            this.buttonDong.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(122)))), ((int)(((byte)(153)))));
             this.buttonDong.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonDong.Font = new System.Drawing.Font("Palatino Linotype", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonDong.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.buttonDong.Location = new System.Drawing.Point(548, 19);
+            this.buttonDong.Location = new System.Drawing.Point(671, 19);
             this.buttonDong.Name = "buttonDong";
             this.buttonDong.Size = new System.Drawing.Size(100, 40);
             this.buttonDong.TabIndex = 4;
@@ -75,11 +75,11 @@
             // 
             // buttonXoa
             // 
-            this.buttonXoa.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(46)))), ((int)(((byte)(254)))));
+            this.buttonXoa.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(122)))), ((int)(((byte)(153)))));
             this.buttonXoa.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonXoa.Font = new System.Drawing.Font("Palatino Linotype", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonXoa.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.buttonXoa.Location = new System.Drawing.Point(424, 19);
+            this.buttonXoa.Location = new System.Drawing.Point(542, 19);
             this.buttonXoa.Name = "buttonXoa";
             this.buttonXoa.Size = new System.Drawing.Size(100, 40);
             this.buttonXoa.TabIndex = 2;
@@ -89,11 +89,11 @@
             // 
             // buttonSua
             // 
-            this.buttonSua.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(46)))), ((int)(((byte)(254)))));
+            this.buttonSua.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(122)))), ((int)(((byte)(153)))));
             this.buttonSua.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonSua.Font = new System.Drawing.Font("Palatino Linotype", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonSua.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.buttonSua.Location = new System.Drawing.Point(288, 19);
+            this.buttonSua.Location = new System.Drawing.Point(416, 19);
             this.buttonSua.Name = "buttonSua";
             this.buttonSua.Size = new System.Drawing.Size(100, 40);
             this.buttonSua.TabIndex = 1;
@@ -102,12 +102,12 @@
             // 
             // buttonThem
             // 
-            this.buttonThem.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(46)))), ((int)(((byte)(254)))));
+            this.buttonThem.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(122)))), ((int)(((byte)(153)))));
             this.buttonThem.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonThem.Font = new System.Drawing.Font("Palatino Linotype", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonThem.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.buttonThem.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.buttonThem.Location = new System.Drawing.Point(158, 19);
+            this.buttonThem.Location = new System.Drawing.Point(283, 19);
             this.buttonThem.Name = "buttonThem";
             this.buttonThem.Size = new System.Drawing.Size(100, 40);
             this.buttonThem.TabIndex = 0;
@@ -137,13 +137,13 @@
             this.Nam,
             this.ChiTieu,
             this.SLDaTuyen});
-            this.dataGridViewTS.Location = new System.Drawing.Point(12, 68);
+            this.dataGridViewTS.Location = new System.Drawing.Point(12, 86);
             this.dataGridViewTS.Name = "dataGridViewTS";
             this.dataGridViewTS.ReadOnly = true;
             this.dataGridViewTS.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
             this.dataGridViewTS.RowHeadersVisible = false;
             this.dataGridViewTS.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dataGridViewTS.Size = new System.Drawing.Size(805, 318);
+            this.dataGridViewTS.Size = new System.Drawing.Size(996, 356);
             this.dataGridViewTS.TabIndex = 2;
             // 
             // TenTruong
@@ -193,7 +193,7 @@
             "2015",
             "2016",
             "2017"});
-            this.comboBoxNam.Location = new System.Drawing.Point(424, 22);
+            this.comboBoxNam.Location = new System.Drawing.Point(513, 26);
             this.comboBoxNam.Name = "comboBoxNam";
             this.comboBoxNam.Size = new System.Drawing.Size(121, 30);
             this.comboBoxNam.TabIndex = 3;
@@ -204,7 +204,7 @@
             this.labelNam.AutoSize = true;
             this.labelNam.Font = new System.Drawing.Font("Palatino Linotype", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelNam.ForeColor = System.Drawing.Color.White;
-            this.labelNam.Location = new System.Drawing.Point(295, 22);
+            this.labelNam.Location = new System.Drawing.Point(384, 26);
             this.labelNam.Name = "labelNam";
             this.labelNam.Size = new System.Drawing.Size(106, 26);
             this.labelNam.TabIndex = 4;
@@ -214,8 +214,8 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(154)))), ((int)(((byte)(254)))), ((int)(((byte)(46)))));
-            this.ClientSize = new System.Drawing.Size(829, 461);
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(204)))), ((int)(((byte)(255)))));
+            this.ClientSize = new System.Drawing.Size(1020, 550);
             this.Controls.Add(this.labelNam);
             this.Controls.Add(this.comboBoxNam);
             this.Controls.Add(this.dataGridViewTS);
@@ -223,6 +223,7 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "FormTuyenSinh";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "Dữ liệu Tuyển sinh";
             this.Load += new System.EventHandler(this.FormTuyenSinh_Load);
             this.panelButton.ResumeLayout(false);

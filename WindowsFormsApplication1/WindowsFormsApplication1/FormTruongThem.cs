@@ -42,8 +42,7 @@ namespace WindowsFormsApplication1
         {
             if (string.IsNullOrEmpty(id))
             {
-                //thêm              
-
+                //thêm
             }
             else
             {
@@ -62,36 +61,36 @@ namespace WindowsFormsApplication1
             if (string.IsNullOrEmpty(id))
             {
                 return str = "INSERT INTO Truong(MaTruong,TenTruong,DiaChi,BQL,Website) " +
-                    "VALUES ('" + MaTruong.Text + "','" + TenTruong.Text + "','" + DiaChi.Text + "','" + BQL.Text + "','" + Website.Text + "')";  // lay het du lieu tu bang truong de dien du lieu vao form
+                    "VALUES (N'" + MaTruong.Text + "',N'" + TenTruong.Text + "',N'" + DiaChi.Text + "',N'" + BQL.Text + "',N'" + Website.Text + "')";  // lay het du lieu tu bang truong de dien du lieu vao form
             }
             else
             {
                 return str = "UPDATE [dbo].[Truong]" +
-                "   SET      [TenTruong] = '" + TenTruong.Text +
-                "'          ,[DiaChi] = '" + DiaChi.Text +
-                "'          ,[BQL] = '" + BQL.Text +
-                "'          ,[Website] = '" + Website.Text +
+                "   SET      [TenTruong] = N'" + TenTruong.Text +
+                "'          ,[DiaChi] = N'" + DiaChi.Text +
+                "'          ,[BQL] = N'" + BQL.Text +
+                "'          ,[Website] = N'" + Website.Text +
                 "'   WHERE [MaTruong] = '" + MaTruong.Text + "'";  // lay het du lieu trong bang tuyen sinh và truong
             }
         }
         private void buttonLuu_Click(object sender, EventArgs e)
         {
-  //          try
- //           {
+            try
+           {
                 con.Open();
                 SqlCommand command = new SqlCommand(); //bat dau truy van
                 command.Connection = con;
                 command.CommandText = sql1();
                 int rowcount = command.ExecuteNonQuery();
                 con.Close();  // đóng kết nối
-                MessageBox.Show(sql1());                
+                //MessageBox.Show(sql1());                
                 this.Close();
                 
- /*           }
+           }
             catch
             {
-                MessageBox.Show("Lỗi! Kiểm tra lại thông tin sửa.");
-            }*/
+                MessageBox.Show("Lỗi! Kiểm tra lại thông tin trên form.");
+            }
             
         }
     }

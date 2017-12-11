@@ -52,24 +52,24 @@
             // 
             // panelButton
             // 
-            this.panelButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(154)))), ((int)(((byte)(254)))), ((int)(((byte)(46)))));
+            this.panelButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(204)))), ((int)(((byte)(255)))));
             this.panelButton.Controls.Add(this.buttonDong);
             this.panelButton.Controls.Add(this.buttonChitiet);
             this.panelButton.Controls.Add(this.buttonXoa);
             this.panelButton.Controls.Add(this.buttonSua);
             this.panelButton.Controls.Add(this.buttonThem);
-            this.panelButton.Location = new System.Drawing.Point(0, 390);
+            this.panelButton.Location = new System.Drawing.Point(12, 458);
             this.panelButton.Name = "panelButton";
-            this.panelButton.Size = new System.Drawing.Size(828, 71);
+            this.panelButton.Size = new System.Drawing.Size(996, 71);
             this.panelButton.TabIndex = 0;
             // 
             // buttonDong
             // 
-            this.buttonDong.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.buttonDong.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(122)))), ((int)(((byte)(153)))));
             this.buttonDong.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonDong.Font = new System.Drawing.Font("Palatino Linotype", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonDong.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.buttonDong.Location = new System.Drawing.Point(582, 19);
+            this.buttonDong.Location = new System.Drawing.Point(745, 20);
             this.buttonDong.Name = "buttonDong";
             this.buttonDong.Size = new System.Drawing.Size(100, 40);
             this.buttonDong.TabIndex = 4;
@@ -79,11 +79,11 @@
             // 
             // buttonChitiet
             // 
-            this.buttonChitiet.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.buttonChitiet.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(122)))), ((int)(((byte)(153)))));
             this.buttonChitiet.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonChitiet.Font = new System.Drawing.Font("Palatino Linotype", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonChitiet.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.buttonChitiet.Location = new System.Drawing.Point(476, 19);
+            this.buttonChitiet.Location = new System.Drawing.Point(615, 20);
             this.buttonChitiet.Name = "buttonChitiet";
             this.buttonChitiet.Size = new System.Drawing.Size(100, 40);
             this.buttonChitiet.TabIndex = 3;
@@ -93,11 +93,11 @@
             // 
             // buttonXoa
             // 
-            this.buttonXoa.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.buttonXoa.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(122)))), ((int)(((byte)(153)))));
             this.buttonXoa.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonXoa.Font = new System.Drawing.Font("Palatino Linotype", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonXoa.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.buttonXoa.Location = new System.Drawing.Point(370, 19);
+            this.buttonXoa.Location = new System.Drawing.Point(487, 20);
             this.buttonXoa.Name = "buttonXoa";
             this.buttonXoa.Size = new System.Drawing.Size(100, 40);
             this.buttonXoa.TabIndex = 2;
@@ -107,11 +107,11 @@
             // 
             // buttonSua
             // 
-            this.buttonSua.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.buttonSua.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(122)))), ((int)(((byte)(153)))));
             this.buttonSua.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonSua.Font = new System.Drawing.Font("Palatino Linotype", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonSua.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.buttonSua.Location = new System.Drawing.Point(264, 19);
+            this.buttonSua.Location = new System.Drawing.Point(350, 20);
             this.buttonSua.Name = "buttonSua";
             this.buttonSua.Size = new System.Drawing.Size(100, 40);
             this.buttonSua.TabIndex = 1;
@@ -121,12 +121,12 @@
             // 
             // buttonThem
             // 
-            this.buttonThem.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.buttonThem.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(122)))), ((int)(((byte)(153)))));
             this.buttonThem.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonThem.Font = new System.Drawing.Font("Palatino Linotype", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonThem.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.buttonThem.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.buttonThem.Location = new System.Drawing.Point(158, 19);
+            this.buttonThem.Location = new System.Drawing.Point(214, 20);
             this.buttonThem.Name = "buttonThem";
             this.buttonThem.Size = new System.Drawing.Size(100, 40);
             this.buttonThem.TabIndex = 0;
@@ -159,13 +159,13 @@
             this.Website,
             this.BQL});
             this.dataGridViewTruong.GridColor = System.Drawing.Color.White;
-            this.dataGridViewTruong.Location = new System.Drawing.Point(12, 58);
+            this.dataGridViewTruong.Location = new System.Drawing.Point(12, 65);
             this.dataGridViewTruong.Name = "dataGridViewTruong";
             this.dataGridViewTruong.ReadOnly = true;
             this.dataGridViewTruong.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
             this.dataGridViewTruong.RowHeadersVisible = false;
             this.dataGridViewTruong.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dataGridViewTruong.Size = new System.Drawing.Size(805, 326);
+            this.dataGridViewTruong.Size = new System.Drawing.Size(996, 387);
             this.dataGridViewTruong.TabIndex = 1;
             // 
             // MaTruong
@@ -213,7 +213,7 @@
             this.labelTimKiem.AutoSize = true;
             this.labelTimKiem.Font = new System.Drawing.Font("Palatino Linotype", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelTimKiem.ForeColor = System.Drawing.Color.White;
-            this.labelTimKiem.Location = new System.Drawing.Point(24, 17);
+            this.labelTimKiem.Location = new System.Drawing.Point(93, 17);
             this.labelTimKiem.Name = "labelTimKiem";
             this.labelTimKiem.Size = new System.Drawing.Size(100, 26);
             this.labelTimKiem.TabIndex = 2;
@@ -221,32 +221,33 @@
             // 
             // comboBoxTimKiem
             // 
+            this.comboBoxTimKiem.BackColor = System.Drawing.Color.White;
             this.comboBoxTimKiem.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboBoxTimKiem.Font = new System.Drawing.Font("Palatino Linotype", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.comboBoxTimKiem.FormattingEnabled = true;
             this.comboBoxTimKiem.Items.AddRange(new object[] {
             "Mã Trường",
             "Tên Trường"});
-            this.comboBoxTimKiem.Location = new System.Drawing.Point(130, 17);
+            this.comboBoxTimKiem.Location = new System.Drawing.Point(215, 17);
             this.comboBoxTimKiem.Name = "comboBoxTimKiem";
-            this.comboBoxTimKiem.Size = new System.Drawing.Size(165, 30);
+            this.comboBoxTimKiem.Size = new System.Drawing.Size(149, 30);
             this.comboBoxTimKiem.TabIndex = 3;
             // 
             // textBoxTimKiem
             // 
             this.textBoxTimKiem.Font = new System.Drawing.Font("Palatino Linotype", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBoxTimKiem.Location = new System.Drawing.Point(301, 17);
+            this.textBoxTimKiem.Location = new System.Drawing.Point(382, 17);
             this.textBoxTimKiem.Name = "textBoxTimKiem";
-            this.textBoxTimKiem.Size = new System.Drawing.Size(349, 29);
+            this.textBoxTimKiem.Size = new System.Drawing.Size(440, 29);
             this.textBoxTimKiem.TabIndex = 4;
             // 
             // buttonTimKiem
             // 
-            this.buttonTimKiem.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.buttonTimKiem.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(122)))), ((int)(((byte)(153)))));
             this.buttonTimKiem.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonTimKiem.Font = new System.Drawing.Font("Palatino Linotype", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonTimKiem.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.buttonTimKiem.Location = new System.Drawing.Point(677, 12);
+            this.buttonTimKiem.Location = new System.Drawing.Point(839, 14);
             this.buttonTimKiem.Name = "buttonTimKiem";
             this.buttonTimKiem.Size = new System.Drawing.Size(101, 35);
             this.buttonTimKiem.TabIndex = 5;
@@ -258,8 +259,8 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(154)))), ((int)(((byte)(254)))), ((int)(((byte)(46)))));
-            this.ClientSize = new System.Drawing.Size(829, 461);
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(204)))), ((int)(((byte)(255)))));
+            this.ClientSize = new System.Drawing.Size(1020, 550);
             this.Controls.Add(this.buttonTimKiem);
             this.Controls.Add(this.textBoxTimKiem);
             this.Controls.Add(this.comboBoxTimKiem);

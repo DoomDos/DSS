@@ -77,6 +77,7 @@ namespace WindowsFormsApplication1
             command.CommandText = sql1;
             int rowcount = command.ExecuteNonQuery();
             con.Close();  // đóng kết nối
+            MessageBox.Show("Xóa thành công");     
             resetForm();
         }
 
@@ -101,7 +102,7 @@ namespace WindowsFormsApplication1
             }
             else
             {
-                sql1 = "select * from Truong where TenTruong like '%" + textBoxTimKiem.Text + "%'";  // lay het du lieu trong bang truong 
+                sql1 = "select * from Truong where TenTruong like N'%" + textBoxTimKiem.Text + "%'";  // lay het du lieu trong bang truong 
             }
             con.Open();
             SqlCommand comm = new SqlCommand(sql1, con); //bat dau truy van
