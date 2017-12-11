@@ -15,9 +15,10 @@ namespace WindowsFormsApplication1
     {
         public FormTruong()
         {
-            InitializeComponent();
+            InitializeComponent();            
         }
-        SqlConnection con = new SqlConnection(@"Data Source=DESKTOP-38C3K9H\SQLEXPRESS;Initial Catalog=TuVanTuyenSinh;Integrated Security=True");
+        string sql1;
+        SqlConnection con = conStr.GetDBConnection();
         private void ketnoicsdl()
         {
             con.Open();
@@ -41,7 +42,8 @@ namespace WindowsFormsApplication1
 
         private void buttonThem_Click(object sender, EventArgs e)
         {
-            var formTruongThem = new FormTruongThem();
+            var formTruongThem = new FormTruongThem(null);
+            formTruongThem.FormClosing += new FormClosingEventHandler(ChildFormClosing);
             formTruongThem.ShowDialog();
         }
 
@@ -55,6 +57,60 @@ namespace WindowsFormsApplication1
 
             comboBoxTimKiem.SelectedIndex = 0;
             ketnoicsdl();
+        }
+
+        private void buttonSua_Click(object sender, EventArgs e)
+        {
+            string id = dataGridViewTruong.CurrentRow.Cells[0].Value.ToString();
+            var formTruongThem = new FormTruongThem(id);
+            formTruongThem.FormClosing += new FormClosingEventHandler(ChildFormClosing);
+            formTruongThem.ShowDialog();
+        }
+
+        private void buttonXoa_Click(object sender, EventArgs e)
+        {
+            string idDel = dataGridViewTruong.CurrentRow.Cells[0].Value.ToString();
+            con.Open();
+            string sql1 = "DELETE FROM Truong WHERE MaTruong ='" + idDel + "'";
+            SqlCommand command = new SqlCommand(); //bat dau truy van
+            command.Connection = con;
+            command.CommandText = sql1;
+            int rowcount = command.ExecuteNonQuery();
+            con.Close();  // đóng kết nối
+            resetForm();
+        }
+
+        public void resetForm()
+        {
+            this.comboBoxTimKiem.SelectedIndex = 0;
+            this.ketnoicsdl();
+        }
+
+        private void ChildFormClosing(object sender, FormClosingEventArgs e)
+        {
+            resetForm();
+   
+        }
+
+        private void buttonTimKiem_Click(object sender, EventArgs e)
+        {
+            if(comboBoxTimKiem.SelectedIndex == 0)
+            {
+                
+                sql1 = "select * from Truong where MaTruong like '%" + textBoxTimKiem.Text+"%'";  // lay het du lieu trong bang truong                
+            }
+            else
+            {
+                sql1 = "select * from Truong where TenTruong like '%" + textBoxTimKiem.Text + "%'";  // lay het du lieu trong bang truong 
+            }
+            con.Open();
+            SqlCommand comm = new SqlCommand(sql1, con); //bat dau truy van
+            comm.CommandType = CommandType.Text;
+            SqlDataAdapter da = new SqlDataAdapter(comm); //chuyen du lieu ve
+            DataTable dt = new DataTable(); //tạo một kho ảo để lưu trữ dữ liệu
+            da.Fill(dt);  // đổ dữ liệu vào kho
+            con.Close();  // đóng kết nối
+            dataGridViewTruong.DataSource = dt; //đổ dữ liệu vào datagridview
         }
     }
 }

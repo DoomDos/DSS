@@ -154,6 +154,7 @@
             this.buttonLuu.TabIndex = 19;
             this.buttonLuu.Text = "Lưu";
             this.buttonLuu.UseVisualStyleBackColor = false;
+            this.buttonLuu.Click += new System.EventHandler(this.buttonLuu_Click);
             // 
             // buttonHuy
             // 
@@ -191,6 +192,7 @@
             this.Name = "FormTruongThem";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "FormTruongThem";
+            this.Load += new System.EventHandler(this.FormTruongThem_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -199,7 +201,6 @@
         #endregion
 
         private System.Windows.Forms.Label labelMaTruong;
-        private System.Windows.Forms.TextBox MaTruong;
         private System.Windows.Forms.Label labelWebsite;
         private System.Windows.Forms.Label labelTenTruong;
         private System.Windows.Forms.Label labelDiaChi;
@@ -210,5 +211,6 @@
         private System.Windows.Forms.TextBox TenTruong;
         private System.Windows.Forms.Button buttonLuu;
         private System.Windows.Forms.Button buttonHuy;
+        private System.Windows.Forms.TextBox MaTruong;
     }
 }

@@ -43,7 +43,6 @@
             this.SLDaTuyen = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.comboBoxNam = new System.Windows.Forms.ComboBox();
             this.labelNam = new System.Windows.Forms.Label();
-            this.buttonNam = new System.Windows.Forms.Button();
             this.panelButton.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewTS)).BeginInit();
             this.SuspendLayout();
@@ -121,7 +120,7 @@
             this.dataGridViewTS.AllowUserToAddRows = false;
             this.dataGridViewTS.AllowUserToDeleteRows = false;
             this.dataGridViewTS.AllowUserToOrderColumns = true;
-            this.dataGridViewTS.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.DisplayedCells;
+            this.dataGridViewTS.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dataGridViewTS.BackgroundColor = System.Drawing.Color.White;
             dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
@@ -143,6 +142,7 @@
             this.dataGridViewTS.ReadOnly = true;
             this.dataGridViewTS.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
             this.dataGridViewTS.RowHeadersVisible = false;
+            this.dataGridViewTS.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dataGridViewTS.Size = new System.Drawing.Size(805, 318);
             this.dataGridViewTS.TabIndex = 2;
             // 
@@ -152,7 +152,6 @@
             this.TenTruong.HeaderText = "Tên Trường";
             this.TenTruong.Name = "TenTruong";
             this.TenTruong.ReadOnly = true;
-            this.TenTruong.Width = 114;
             // 
             // MaTruong
             // 
@@ -160,7 +159,6 @@
             this.MaTruong.HeaderText = "Mã Trường";
             this.MaTruong.Name = "MaTruong";
             this.MaTruong.ReadOnly = true;
-            this.MaTruong.Width = 110;
             // 
             // Nam
             // 
@@ -168,7 +166,6 @@
             this.Nam.HeaderText = "Năm";
             this.Nam.Name = "Nam";
             this.Nam.ReadOnly = true;
-            this.Nam.Width = 71;
             // 
             // ChiTieu
             // 
@@ -176,7 +173,6 @@
             this.ChiTieu.HeaderText = "Chỉ tiêu tuyển sinh";
             this.ChiTieu.Name = "ChiTieu";
             this.ChiTieu.ReadOnly = true;
-            this.ChiTieu.Width = 133;
             // 
             // SLDaTuyen
             // 
@@ -184,7 +180,6 @@
             this.SLDaTuyen.HeaderText = "Đã Tuyển";
             this.SLDaTuyen.Name = "SLDaTuyen";
             this.SLDaTuyen.ReadOnly = true;
-            this.SLDaTuyen.Width = 98;
             // 
             // comboBoxNam
             // 
@@ -192,13 +187,13 @@
             this.comboBoxNam.Font = new System.Drawing.Font("Palatino Linotype", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.comboBoxNam.FormattingEnabled = true;
             this.comboBoxNam.Items.AddRange(new object[] {
-            "",
+            "Tất cả",
             "2013",
             "2014",
             "2015",
             "2016",
             "2017"});
-            this.comboBoxNam.Location = new System.Drawing.Point(344, 26);
+            this.comboBoxNam.Location = new System.Drawing.Point(424, 22);
             this.comboBoxNam.Name = "comboBoxNam";
             this.comboBoxNam.Size = new System.Drawing.Size(121, 30);
             this.comboBoxNam.TabIndex = 3;
@@ -209,24 +204,11 @@
             this.labelNam.AutoSize = true;
             this.labelNam.Font = new System.Drawing.Font("Palatino Linotype", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelNam.ForeColor = System.Drawing.Color.White;
-            this.labelNam.Location = new System.Drawing.Point(218, 26);
+            this.labelNam.Location = new System.Drawing.Point(295, 22);
             this.labelNam.Name = "labelNam";
             this.labelNam.Size = new System.Drawing.Size(106, 26);
             this.labelNam.TabIndex = 4;
             this.labelNam.Text = "Chọn năm";
-            // 
-            // buttonNam
-            // 
-            this.buttonNam.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(46)))), ((int)(((byte)(254)))));
-            this.buttonNam.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttonNam.Font = new System.Drawing.Font("Palatino Linotype", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonNam.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.buttonNam.Location = new System.Drawing.Point(501, 20);
-            this.buttonNam.Name = "buttonNam";
-            this.buttonNam.Size = new System.Drawing.Size(100, 40);
-            this.buttonNam.TabIndex = 5;
-            this.buttonNam.Text = "Xong";
-            this.buttonNam.UseVisualStyleBackColor = false;
             // 
             // FormTuyenSinh
             // 
@@ -234,7 +216,6 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(154)))), ((int)(((byte)(254)))), ((int)(((byte)(46)))));
             this.ClientSize = new System.Drawing.Size(829, 461);
-            this.Controls.Add(this.buttonNam);
             this.Controls.Add(this.labelNam);
             this.Controls.Add(this.comboBoxNam);
             this.Controls.Add(this.dataGridViewTS);
@@ -261,7 +242,6 @@
         private System.Windows.Forms.DataGridView dataGridViewTS;
         private System.Windows.Forms.ComboBox comboBoxNam;
         private System.Windows.Forms.Label labelNam;
-        private System.Windows.Forms.Button buttonNam;
         private System.Windows.Forms.DataGridViewTextBoxColumn TenTruong;
         private System.Windows.Forms.DataGridViewTextBoxColumn MaTruong;
         private System.Windows.Forms.DataGridViewTextBoxColumn Nam;
