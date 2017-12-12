@@ -36,10 +36,10 @@
             this.ChiTieu = new System.Windows.Forms.TextBox();
             this.Nam = new System.Windows.Forms.TextBox();
             this.DaTuyen = new System.Windows.Forms.TextBox();
-            this.TenTruong = new System.Windows.Forms.ComboBox();
-            this.MaTruong = new System.Windows.Forms.ComboBox();
             this.buttonLuu = new System.Windows.Forms.Button();
             this.buttonHuy = new System.Windows.Forms.Button();
+            this.TenTruong = new System.Windows.Forms.TextBox();
+            this.MaTruong = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // labelDaTuyen
@@ -124,24 +124,6 @@
             this.DaTuyen.Size = new System.Drawing.Size(386, 33);
             this.DaTuyen.TabIndex = 10;
             // 
-            // TenTruong
-            // 
-            this.TenTruong.Font = new System.Drawing.Font("Palatino Linotype", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.TenTruong.FormattingEnabled = true;
-            this.TenTruong.Location = new System.Drawing.Point(183, 37);
-            this.TenTruong.Name = "TenTruong";
-            this.TenTruong.Size = new System.Drawing.Size(386, 34);
-            this.TenTruong.TabIndex = 11;
-            // 
-            // MaTruong
-            // 
-            this.MaTruong.Font = new System.Drawing.Font("Palatino Linotype", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.MaTruong.FormattingEnabled = true;
-            this.MaTruong.Location = new System.Drawing.Point(183, 87);
-            this.MaTruong.Name = "MaTruong";
-            this.MaTruong.Size = new System.Drawing.Size(386, 34);
-            this.MaTruong.TabIndex = 12;
-            // 
             // buttonLuu
             // 
             this.buttonLuu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(122)))), ((int)(((byte)(153)))));
@@ -154,6 +136,7 @@
             this.buttonLuu.TabIndex = 13;
             this.buttonLuu.Text = "Lưu";
             this.buttonLuu.UseVisualStyleBackColor = false;
+            this.buttonLuu.Click += new System.EventHandler(this.buttonLuu_Click);
             // 
             // buttonHuy
             // 
@@ -169,16 +152,36 @@
             this.buttonHuy.UseVisualStyleBackColor = false;
             this.buttonHuy.Click += new System.EventHandler(this.buttonHuy_Click);
             // 
+            // TenTruong
+            // 
+            this.TenTruong.Enabled = false;
+            this.TenTruong.Font = new System.Drawing.Font("Palatino Linotype", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TenTruong.ForeColor = System.Drawing.SystemColors.WindowText;
+            this.TenTruong.Location = new System.Drawing.Point(183, 37);
+            this.TenTruong.Name = "TenTruong";
+            this.TenTruong.Size = new System.Drawing.Size(386, 33);
+            this.TenTruong.TabIndex = 15;
+            // 
+            // MaTruong
+            // 
+            this.MaTruong.Enabled = false;
+            this.MaTruong.Font = new System.Drawing.Font("Palatino Linotype", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.MaTruong.ForeColor = System.Drawing.SystemColors.WindowText;
+            this.MaTruong.Location = new System.Drawing.Point(183, 87);
+            this.MaTruong.Name = "MaTruong";
+            this.MaTruong.Size = new System.Drawing.Size(386, 33);
+            this.MaTruong.TabIndex = 16;
+            // 
             // FormTuyenSinhThem
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
             this.ClientSize = new System.Drawing.Size(620, 350);
-            this.Controls.Add(this.buttonHuy);
-            this.Controls.Add(this.buttonLuu);
             this.Controls.Add(this.MaTruong);
             this.Controls.Add(this.TenTruong);
+            this.Controls.Add(this.buttonHuy);
+            this.Controls.Add(this.buttonLuu);
             this.Controls.Add(this.DaTuyen);
             this.Controls.Add(this.Nam);
             this.Controls.Add(this.ChiTieu);
@@ -191,6 +194,7 @@
             this.Name = "FormTuyenSinhThem";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "FormTuyenSinhThem";
+            this.Load += new System.EventHandler(this.FormTuyenSinhThem_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -206,9 +210,9 @@
         private System.Windows.Forms.TextBox ChiTieu;
         private System.Windows.Forms.TextBox Nam;
         private System.Windows.Forms.TextBox DaTuyen;
-        private System.Windows.Forms.ComboBox TenTruong;
-        private System.Windows.Forms.ComboBox MaTruong;
         private System.Windows.Forms.Button buttonLuu;
         private System.Windows.Forms.Button buttonHuy;
+        private System.Windows.Forms.TextBox TenTruong;
+        private System.Windows.Forms.TextBox MaTruong;
     }
 }

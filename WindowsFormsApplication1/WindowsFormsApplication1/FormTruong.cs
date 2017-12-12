@@ -18,25 +18,17 @@ namespace WindowsFormsApplication1
             InitializeComponent();            
         }
         string sql1;
-        SqlConnection con = conStr.GetDBConnection();
         private void ketnoicsdl()
-        {
-            con.Open();
-            string sql = "select * from Truong";  // lay het du lieu trong bang truong
-            SqlCommand comm = new SqlCommand(sql, con); //bat dau truy van
-            comm.CommandType = CommandType.Text;
-            SqlDataAdapter da = new SqlDataAdapter(comm); //chuyen du lieu ve
-            DataTable dt = new DataTable(); //tạo một kho ảo để lưu trữ dữ liệu
-            da.Fill(dt);  // đổ dữ liệu vào kho
-            con.Close();  // đóng kết nối
-            dataGridViewTruong.DataSource = dt; //đổ dữ liệu vào datagridview
+        {            
+            string sql = "select * from Truong";  // Lấy dữ liệu bảng trường            
+            dataGridViewTruong.DataSource = ExcuteSql.connectDB(sql); ; //đổ dữ liệu vào datagridview
         }
         private void buttonChitiet_Click(object sender, EventArgs e)
         {
 
             string id = dataGridViewTruong.CurrentRow.Cells[0].Value.ToString();
             
-            var formTuyenSinh = new FormTuyenSinh(id);
+            var formTuyenSinh = new FormTuyenSinh(id,"");
             formTuyenSinh.ShowDialog();
         }
 
@@ -69,16 +61,18 @@ namespace WindowsFormsApplication1
 
         private void buttonXoa_Click(object sender, EventArgs e)
         {
-            string idDel = dataGridViewTruong.CurrentRow.Cells[0].Value.ToString();
-            con.Open();
-            string sql1 = "DELETE FROM Truong WHERE MaTruong ='" + idDel + "'";
-            SqlCommand command = new SqlCommand(); //bat dau truy van
-            command.Connection = con;
-            command.CommandText = sql1;
-            int rowcount = command.ExecuteNonQuery();
-            con.Close();  // đóng kết nối
-            MessageBox.Show("Xóa thành công");     
-            resetForm();
+            try
+            {
+                string idDel = dataGridViewTruong.CurrentRow.Cells[0].Value.ToString();
+                string sql = "DELETE FROM Truong WHERE MaTruong ='" + idDel + "'"; //Xóa theo mã trường
+                ExcuteSql.excuteCom(sql);
+                MessageBox.Show("Xóa thành công");
+                resetForm();
+            }
+            catch
+            {
+                MessageBox.Show("Không thể xóa!");
+            }
         }
 
         public void resetForm()
@@ -97,21 +91,15 @@ namespace WindowsFormsApplication1
         {
             if(comboBoxTimKiem.SelectedIndex == 0)
             {
-                
-                sql1 = "select * from Truong where MaTruong like '%" + textBoxTimKiem.Text+"%'";  // lay het du lieu trong bang truong                
+                // Tìm kiếm với mã trường
+                sql1 = "select * from Truong where MaTruong like '%" + textBoxTimKiem.Text+"%'";               
             }
             else
             {
-                sql1 = "select * from Truong where TenTruong like N'%" + textBoxTimKiem.Text + "%'";  // lay het du lieu trong bang truong 
+                // Tìm kiếm với tên trường
+                sql1 = "select * from Truong where TenTruong like N'%" + textBoxTimKiem.Text + "%'";
             }
-            con.Open();
-            SqlCommand comm = new SqlCommand(sql1, con); //bat dau truy van
-            comm.CommandType = CommandType.Text;
-            SqlDataAdapter da = new SqlDataAdapter(comm); //chuyen du lieu ve
-            DataTable dt = new DataTable(); //tạo một kho ảo để lưu trữ dữ liệu
-            da.Fill(dt);  // đổ dữ liệu vào kho
-            con.Close();  // đóng kết nối
-            dataGridViewTruong.DataSource = dt; //đổ dữ liệu vào datagridview
+            dataGridViewTruong.DataSource = ExcuteSql.connectDB(sql1); ; //đổ dữ liệu vào datagridview
         }
     }
 }
