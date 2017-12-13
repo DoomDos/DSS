@@ -106,7 +106,15 @@ namespace WindowsFormsApplication1
                     {
                         dudoanM = dudoanC + a * (sl - dudoanC);
                         dudoanC = dudoanM;
-                        sl += (dudoanM - dudoanC);
+                        try
+                        {
+                            sl = int.Parse(tb.Rows[i - 1][4].ToString());
+                        }
+                        catch
+                        {
+                            sl += (dudoanM - dudoanC);
+                        }
+                        
                     }
                 }
                 return dudoanM.ToString();
