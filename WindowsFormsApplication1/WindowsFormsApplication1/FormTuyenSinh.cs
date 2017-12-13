@@ -13,28 +13,24 @@ namespace WindowsFormsApplication1
 {
     public partial class FormTuyenSinh : Form
     {
-        public FormTuyenSinh(string id)
+        public FormTuyenSinh(string id, string nam)
         {
             InitializeComponent();
             this.id = id;
+            this.nam = nam;
         }
         string id;
-        SqlConnection con = conStr.GetDBConnection();
+        string nam;
+        
         private void ketnoicsdl(string id)
-        {
-            con.Open();
-            string sql = "select Truong.TenTruong, TuyenSinh.* from Truong,TuyenSinh where TuyenSinh.MaTruong='" + id +"' AND Truong.MaTruong='" + id + "'";  // lay het du lieu trong bang tuyen sinh và truong
-            SqlCommand comm = new SqlCommand(sql, con); //bat dau truy van
-            comm.CommandType = CommandType.Text;
-            SqlDataAdapter da = new SqlDataAdapter(comm); //chuyen du lieu ve
-            DataTable dt = new DataTable(); //tạo một kho ảo để lưu trữ dữ liệu
-            da.Fill(dt);  // đổ dữ liệu vào kho
-            con.Close();  // đóng kết nối
-            dataGridViewTS.DataSource = dt; //đổ dữ liệu vào datagridview
+        {            
+            string sql = "select Truong.TenTruong, TuyenSinh.* from Truong,TuyenSinh where TuyenSinh.MaTruong='" + id +"' AND Truong.MaTruong='" + id + "'";
+            dataGridViewTS.DataSource = ExcuteSql.connectDB(sql); //đổ dữ liệu vào datagridview
         }
         private void buttonThem_Click(object sender, EventArgs e)
         {
-            var formTuyenSinhThem = new FormTuyenSinhThem();
+            var formTuyenSinhThem = new FormTuyenSinhThem(id,null);
+            formTuyenSinhThem.FormClosing += new FormClosingEventHandler(ChildFormClosing);
             formTuyenSinhThem.ShowDialog();
         }
 
@@ -45,36 +41,73 @@ namespace WindowsFormsApplication1
 
         private void FormTuyenSinh_Load(object sender, EventArgs e)
         {
+            string sql = "SELECT DISTINCT TuyenSinh.Nam FROM TuyenSinh ORDER BY TuyenSinh.Nam ASC; ";
+            SqlDataReader dr = ExcuteSql.excuteSqlReader(sql);
+            while (dr.Read())
+                comboBoxNam.Items.Add(dr.GetValue(0));
+            dr.Close();
+            comboBoxNam.SelectedIndex = 0;
             ketnoicsdl(id);
+
+            
         }
 
         private void buttonXoa_Click(object sender, EventArgs e)
         {
-            string del = dataGridViewTS.CurrentRow.Cells[0].Value.ToString();
-            con.Open();
-            string sql = "select Truong.TenTruong, TuyenSinh.* from Truong,TuyenSinh where TuyenSinh.MaTruong='" + id + "' AND Truong.MaTruong='" + id + "'";  // lay het du lieu trong bang tuyen sinh và truong
-            SqlCommand comm = new SqlCommand(sql, con); //bat dau truy van
-            con.Close();
+            try
+            {
+                string idDelTr = dataGridViewTS.CurrentRow.Cells[1].Value.ToString();
+                string idDelNam = dataGridViewTS.CurrentRow.Cells[2].Value.ToString();
+                string sql = "DELETE FROM TuyenSinh WHERE MaTruong ='" + idDelTr + "' AND Nam = '" + idDelNam +"'"; //Xóa theo mã trường và năm
+                var confirmResult = MessageBox.Show("Bạn chắc chắn muốn xóa năm "+ idDelNam +"?",
+                                     "Xóa năm!!",
+                                     MessageBoxButtons.YesNo);
+                if (confirmResult == DialogResult.Yes)
+                {
+                    ExcuteSql.excuteCom(sql);
+                    MessageBox.Show("Xóa thành công");
+                    resetForm();
+                }
+                else
+                {
+                    // If 'No', do something here.
+                }
+                
+            }
+            catch
+            {
+                MessageBox.Show("Không thể xóa!");
+            }
+        }
+        public void resetForm()
+        {
+            this.Refresh();
+            this.comboBoxNam.SelectedIndex = 0;
+            this.ketnoicsdl(id);
         }
 
         private void comboBoxNam_SelectedIndexChanged(object sender, EventArgs e)
         {
             string nam = comboBoxNam.GetItemText(comboBoxNam.SelectedItem);
             if (nam != "Tất cả")
-            {      
-                con.Open();
-                string sql = "select Truong.TenTruong, TuyenSinh.* from Truong,TuyenSinh where TuyenSinh.Nam='" + nam + "' AND Truong.MaTruong='" + id + "' AND TuyenSinh.MaTruong='" + id + "'";  // lay het du lieu trong bang tuyen sinh và truong
-                SqlCommand comm = new SqlCommand(sql, con); //bat dau truy van
-                comm.CommandType = CommandType.Text;
-                SqlDataAdapter da = new SqlDataAdapter(comm); //chuyen du lieu ve
-                DataTable dt = new DataTable(); //tạo một kho ảo để lưu trữ dữ liệu
-                da.Fill(dt);  // đổ dữ liệu vào kho
-                con.Close();  // đóng kết nối
-                dataGridViewTS.DataSource = dt; //đổ dữ liệu vào datagridview
+            {
+                string sql = "select Truong.TenTruong, TuyenSinh.* from Truong,TuyenSinh where TuyenSinh.Nam='" + nam + "' AND Truong.MaTruong='" + id + "' AND TuyenSinh.MaTruong='" + id + "'";                
+                dataGridViewTS.DataSource = ExcuteSql.connectDB(sql); //đổ dữ liệu vào datagridview
             }
             else {
                 ketnoicsdl(id);
             }
+        }        
+
+        private void buttonSua_Click(object sender, EventArgs e)
+        {   nam = dataGridViewTS.CurrentRow.Cells[2].Value.ToString();
+            var formTuyenSinhThem = new FormTuyenSinhThem(id,nam);
+            formTuyenSinhThem.FormClosing += new FormClosingEventHandler(ChildFormClosing);
+            formTuyenSinhThem.ShowDialog();            
         }
+        private void ChildFormClosing(object sender, FormClosingEventArgs e)
+        {
+            resetForm();
+        }        
     }
 }

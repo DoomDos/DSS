@@ -62,6 +62,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="conStr.cs" />
+    <Compile Include="ExcuteSql.cs" />
     <Compile Include="FormChinh.cs">
       <SubType>Form</SubType>
     </Compile>
