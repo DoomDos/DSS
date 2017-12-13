@@ -193,7 +193,8 @@
             "2014",
             "2015",
             "2016",
-            "2017"});
+            "2017",
+            "2018"});
             this.comboBoxNam.Location = new System.Drawing.Point(513, 26);
             this.comboBoxNam.Name = "comboBoxNam";
             this.comboBoxNam.Size = new System.Drawing.Size(121, 30);

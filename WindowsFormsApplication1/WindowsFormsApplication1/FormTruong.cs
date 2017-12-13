@@ -65,9 +65,20 @@ namespace WindowsFormsApplication1
             {
                 string idDel = dataGridViewTruong.CurrentRow.Cells[0].Value.ToString();
                 string sql = "DELETE FROM Truong WHERE MaTruong ='" + idDel + "'"; //Xóa theo mã trường
-                ExcuteSql.excuteCom(sql);
-                MessageBox.Show("Xóa thành công");
-                resetForm();
+                var confirmResult = MessageBox.Show("Bạn chắc chắn muốn xóa trường "+ dataGridViewTruong.CurrentRow.Cells[1].Value.ToString() +"?",
+                                     "Xóa trường!",
+                                     MessageBoxButtons.YesNo);
+                if (confirmResult == DialogResult.Yes)
+                {                    
+                    ExcuteSql.excuteCom(sql);
+                    MessageBox.Show("Xóa thành công");
+                    resetForm();
+                }
+                else
+                {
+                    
+                }
+                
             }
             catch
             {

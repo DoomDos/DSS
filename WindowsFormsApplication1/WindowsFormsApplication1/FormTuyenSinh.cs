@@ -21,6 +21,7 @@ namespace WindowsFormsApplication1
         }
         string id;
         string nam;
+        
         private void ketnoicsdl(string id)
         {            
             string sql = "select Truong.TenTruong, TuyenSinh.* from Truong,TuyenSinh where TuyenSinh.MaTruong='" + id +"' AND Truong.MaTruong='" + id + "'";            
@@ -50,10 +51,21 @@ namespace WindowsFormsApplication1
             {
                 string idDelTr = dataGridViewTS.CurrentRow.Cells[1].Value.ToString();
                 string idDelNam = dataGridViewTS.CurrentRow.Cells[2].Value.ToString();
-                string sql = "DELETE FROM TuyenSinh WHERE MaTruong ='" + idDelTr + "' AND Nam = '" + idDelNam + "'"; //Xóa theo mã trường và năm
-                ExcuteSql.excuteCom(sql);
-                MessageBox.Show("Xóa thành công");
-                resetForm();
+                string sql = "DELETE FROM TuyenSinh WHERE MaTruong ='" + idDelTr + "' AND Nam = '" + idDelNam +"'"; //Xóa theo mã trường và năm
+                var confirmResult = MessageBox.Show("Bạn chắc chắn muốn xóa năm "+ idDelNam +"?",
+                                     "Xóa năm!!",
+                                     MessageBoxButtons.YesNo);
+                if (confirmResult == DialogResult.Yes)
+                {
+                    ExcuteSql.excuteCom(sql);
+                    MessageBox.Show("Xóa thành công");
+                    resetForm();
+                }
+                else
+                {
+                    // If 'No', do something here.
+                }
+                
             }
             catch
             {
@@ -62,6 +74,7 @@ namespace WindowsFormsApplication1
         }
         public void resetForm()
         {
+            this.Refresh();
             this.comboBoxNam.SelectedIndex = 0;
             this.ketnoicsdl(id);
         }
@@ -83,11 +96,11 @@ namespace WindowsFormsApplication1
         {   nam = dataGridViewTS.CurrentRow.Cells[2].Value.ToString();
             var formTuyenSinhThem = new FormTuyenSinhThem(id,nam);
             formTuyenSinhThem.FormClosing += new FormClosingEventHandler(ChildFormClosing);
-            formTuyenSinhThem.ShowDialog();
+            formTuyenSinhThem.ShowDialog();            
         }
         private void ChildFormClosing(object sender, FormClosingEventArgs e)
         {
             resetForm();
-        }
+        }        
     }
 }

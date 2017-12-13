@@ -20,10 +20,16 @@ namespace WindowsFormsApplication1
         }
         string id;
         string nam;
-        private DataTable ketnoicsdl(string id)
+        
+        private DataTable ketnoicsdlThem(string id)
+        {
+            string sql = "select Truong.TenTruong, TuyenSinh.* from Truong,TuyenSinh where TuyenSinh.MaTruong='" + id + "' AND Truong.MaTruong='" + id + "'";
+            return ExcuteSql.connectDB(sql);
+        }
+        private DataTable ketnoicsdlSua(string id)
         {
             // Lấy dữ liệu trường theo mã trường
-            string sql = "select Truong.TenTruong, TuyenSinh.* from Truong,TuyenSinh where TuyenSinh.MaTruong='" + id + "' AND Truong.MaTruong='" + id + "'";
+            string sql = "select Truong.TenTruong, TuyenSinh.* from Truong,TuyenSinh where TuyenSinh.MaTruong='" + id + "' AND Truong.MaTruong='" + id + "' AND TuyenSinh.Nam = '" + nam +"'";
             return ExcuteSql.connectDB(sql);
 
         }
@@ -34,9 +40,10 @@ namespace WindowsFormsApplication1
 
         private void FormTuyenSinhThem_Load(object sender, EventArgs e)
         {
-            DataTable tb = ketnoicsdl(id);
-            MaTruong.Text = tb.Rows[0][1].ToString();
-            TenTruong.Text = tb.Rows[0][0].ToString();
+            DataTable them = ketnoicsdlThem(id);
+            DataTable sua = ketnoicsdlSua(id);
+            MaTruong.Text = them.Rows[0][1].ToString();
+            TenTruong.Text = them.Rows[0][0].ToString();
             if (string.IsNullOrEmpty(nam))
             {
                 //thêm
@@ -44,9 +51,9 @@ namespace WindowsFormsApplication1
             else
             {
                 //sửa
-                Nam.Text = tb.Rows[0][2].ToString();
-                ChiTieu.Text = tb.Rows[0][3].ToString();
-                DaTuyen.Text = tb.Rows[0][4].ToString();
+                Nam.Text = sua.Rows[0][2].ToString();
+                ChiTieu.Text = sua.Rows[0][3].ToString();
+                DaTuyen.Text = sua.Rows[0][4].ToString();
             }
         }
         private string sql1()
@@ -55,40 +62,33 @@ namespace WindowsFormsApplication1
             if (string.IsNullOrEmpty(nam))
             {
                 // Thêm theo form
-                int chitieu = Convert.ToUInt16(ChiTieu.Text);
-                int datuyen = Convert.ToUInt16(DaTuyen.Text);
-                int idnam = Convert.ToUInt16(Nam.Text);
                 return str = "INSERT INTO TuyenSinh(MaTruong,Nam,ChiTieu,SLDaTuyen) " +
-                    "VALUES (N'" + MaTruong.Text + "'," + idnam + "," + chitieu + "," + datuyen + ")";
+                    "VALUES ('" + MaTruong.Text + "','" + Nam.Text + "','" + ChiTieu.Text + "','" + DaTuyen.Text + "')";
             }
             else
             {
                 // Sửa theo form
-                int chitieu = Convert.ToUInt16(ChiTieu.Text);
-                int datuyen = Convert.ToUInt16(DaTuyen.Text);
-                int idnam = Convert.ToUInt16(nam);
                 return str = "UPDATE [dbo].[TuyenSinh]" +
-                "   SET      [ChiTieu] = " + chitieu +
-                "          ,[SLDaTuyen] = " + datuyen +
-                "   WHERE MaTruong = '" + MaTruong.Text + "' AND Nam = " + idnam;
+                "   SET      [ChiTieu] = '" + ChiTieu.Text +
+                "'          ,[SLDaTuyen] = '" + DaTuyen.Text +
+                "'   WHERE MaTruong = '" + MaTruong.Text + "' AND Nam = '" + nam +"'";
             }
         }
 
         private void buttonLuu_Click(object sender, EventArgs e)
         {
-      //      try
-     //       {
+            try
+            {
                 ExcuteSql.excuteCom(sql1());                
                 MessageBox.Show("Lưu thành công.");
-                int idnam = Convert.ToInt16(nam);
-                Console.WriteLine(MaTruong.Text);
+                FormTuyenSinh fts = new FormTuyenSinh(id, Nam.Text);               
                 this.Close();
 
-   /*         }
+            }
             catch
             {
                 MessageBox.Show("Lỗi! Kiểm tra lại thông tin trên form.");
-            } */
+            } 
         }
     }
 }
