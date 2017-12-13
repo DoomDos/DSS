@@ -54,10 +54,8 @@ namespace WindowsFormsApplication1
         }
 
         private void textBoxTruong_TextChanged(object sender, EventArgs e)
-        {
-            SqlConnection con = conStr.GetDBConnection();
-            con.Open();
-            String sql;
+        { 
+            /*String sql;
             if (comboBoxTuVan.SelectedIndex == 0)
             {
 
@@ -67,17 +65,22 @@ namespace WindowsFormsApplication1
             {
                 sql = "select * from Truong where TenTruong like N'%" + textBoxTruong.Text + "%'";  // lay het du lieu trong bang truong 
             }
-            SqlCommand comm = new SqlCommand(sql, con); //bat dau truy van
-            comm.ExecuteNonQuery();
-            SqlDataReader dr = comm.ExecuteReader();
+
+            SqlDataReader dr = ExcuteSql.excuteSqlReader(sql);
+
             AutoCompleteStringCollection autoCom = new AutoCompleteStringCollection();
             while (dr.Read())
+            {
                 if (comboBoxTuVan.SelectedIndex == 0)
                     autoCom.Add(dr.GetString(0));
                 else
                     autoCom.Add(dr.GetString(1));
+            }
+            
             textBoxTruong.AutoCompleteCustomSource = autoCom;
-            con.Close();  // đóng kết nối
+
+            dr.Close();
+            */
 
         }
         private string ketqua(string id,string nam)

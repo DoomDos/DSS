@@ -72,9 +72,14 @@ namespace WindowsFormsApplication1
         {
             try
            {
-                ExcuteSql.excuteCom(sql1());
-                MessageBox.Show("Lưu thành công");                
-                this.Close();
+                if (string.IsNullOrEmpty(MaTruong.Text) || string.IsNullOrEmpty(TenTruong.Text) || string.IsNullOrEmpty(DiaChi.Text) || string.IsNullOrEmpty(BQL.Text) || string.IsNullOrEmpty(Website.Text))
+                    MessageBox.Show("Các thông tin phải nhập đầy đủ.");
+                else
+                {
+                    ExcuteSql.excuteCom(sql1());
+                    MessageBox.Show("Lưu thành công");
+                    this.Close();
+                }
                 
            }
             catch

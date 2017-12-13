@@ -188,13 +188,7 @@
             this.comboBoxNam.Font = new System.Drawing.Font("Palatino Linotype", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.comboBoxNam.FormattingEnabled = true;
             this.comboBoxNam.Items.AddRange(new object[] {
-            "Tất cả",
-            "2013",
-            "2014",
-            "2015",
-            "2016",
-            "2017",
-            "2018"});
+            "Tất cả"});
             this.comboBoxNam.Location = new System.Drawing.Point(513, 26);
             this.comboBoxNam.Name = "comboBoxNam";
             this.comboBoxNam.Size = new System.Drawing.Size(121, 30);
