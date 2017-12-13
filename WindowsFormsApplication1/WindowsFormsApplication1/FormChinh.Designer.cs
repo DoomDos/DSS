@@ -114,11 +114,11 @@
             this.Controls.Add(this.buttonThoat);
             this.Controls.Add(this.buttonTruong);
             this.Controls.Add(this.buttonTuVan);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.MaximizeBox = false;
             this.Name = "MainForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Phần mềm dự báo số lượng sinh viên Công nghệ Thông tin của các Trường Đại học";
             this.ResumeLayout(false);
 
         }

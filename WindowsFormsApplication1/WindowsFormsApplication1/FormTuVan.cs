@@ -30,6 +30,7 @@ namespace WindowsFormsApplication1
 
         private void textBoxTruong_TextChanged(object sender, EventArgs e)
         {
+            Console.WriteLine(textBoxTruong.Text);
             SqlConnection con = conStr.GetDBConnection();
             con.Open();
             String sql;
@@ -45,13 +46,15 @@ namespace WindowsFormsApplication1
             SqlCommand comm = new SqlCommand(sql, con); //bat dau truy van
             comm.ExecuteNonQuery();
             SqlDataReader dr = comm.ExecuteReader();
-
+            Console.WriteLine(sql);
             AutoCompleteStringCollection autoCom = new AutoCompleteStringCollection();
             while (dr.Read())
+            {
                 if (comboBoxTuVan.SelectedIndex == 0)
                     autoCom.Add(dr.GetString(0));
                 else
                     autoCom.Add(dr.GetString(1));
+            }
             textBoxTruong.AutoCompleteCustomSource = autoCom;
 
             con.Close();  // đóng kết nối
