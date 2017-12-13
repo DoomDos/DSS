@@ -61,7 +61,6 @@
             this.textBoxTruong.Name = "textBoxTruong";
             this.textBoxTruong.Size = new System.Drawing.Size(516, 29);
             this.textBoxTruong.TabIndex = 1;
-            this.textBoxTruong.TextChanged += new System.EventHandler(this.textBoxTruong_TextChanged);
             // 
             // labelNam
             // 
@@ -94,6 +93,7 @@
             this.buttonTuVan.TabIndex = 4;
             this.buttonTuVan.Text = "Tư Vấn";
             this.buttonTuVan.UseVisualStyleBackColor = false;
+            this.buttonTuVan.Click += new System.EventHandler(this.buttonTuVan_Click);
             // 
             // labelSoLuong
             // 

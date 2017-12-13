@@ -29,7 +29,7 @@ namespace WindowsFormsApplication1
             SqlCommand command = new SqlCommand(); //bat dau truy van
             command.Connection = conn;
             command.CommandText = sql1;
-            int rowcount = command.ExecuteNonQuery();
+            command.ExecuteNonQuery();
             conn.Close();  // đóng kết nối            
         }
         public static SqlDataReader excuteSqlReader(string sql)
