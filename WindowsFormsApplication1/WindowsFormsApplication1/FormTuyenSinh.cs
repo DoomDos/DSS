@@ -61,10 +61,6 @@ namespace WindowsFormsApplication1
                     MessageBox.Show("Xóa thành công");
                     resetForm();
                 }
-                else
-                {
-                    // If 'No', do something here.
-                }
                 
             }
             catch
