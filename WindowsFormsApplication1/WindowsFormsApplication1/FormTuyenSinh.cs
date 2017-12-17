@@ -77,7 +77,13 @@ namespace WindowsFormsApplication1
         }
         public void resetForm()
         {
-            this.Refresh();
+            comboBoxNam.Items.Clear();
+            comboBoxNam.Items.Add("Tất cả");
+            string sql = "SELECT DISTINCT TuyenSinh.Nam FROM TuyenSinh ORDER BY TuyenSinh.Nam ASC; ";
+            SqlDataReader dr = ExcuteSql.excuteSqlReader(sql);
+            while (dr.Read())
+                comboBoxNam.Items.Add(dr.GetValue(0));
+            dr.Close();
             this.comboBoxNam.SelectedIndex = 0;
             this.ketnoicsdl(id);
         }
