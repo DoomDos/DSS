@@ -32,16 +32,5 @@ namespace WindowsFormsApplication1
             command.ExecuteNonQuery();
             conn.Close();  // đóng kết nối            
         }
-        public static SqlDataReader excuteSqlReader(string sql)
-        {
-            SqlConnection conn = conStr.GetDBConnection();
-            conn.Open();
-            SqlCommand command = new SqlCommand(); //bat dau truy van
-            command.Connection = conn;
-            command.CommandText = sql;
-            command.ExecuteNonQuery();
-            SqlDataReader dr = command.ExecuteReader();
-            return dr;
-        }
     }
 }
