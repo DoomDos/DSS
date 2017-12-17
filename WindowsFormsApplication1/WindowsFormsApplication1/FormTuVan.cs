@@ -54,7 +54,7 @@ namespace WindowsFormsApplication1
         }
 
         private void textBoxTruong_TextChanged(object sender, EventArgs e)
-        { 
+        {
             /*String sql;
             if (comboBoxTuVan.SelectedIndex == 0)
             {
@@ -83,51 +83,57 @@ namespace WindowsFormsApplication1
             */
 
         }
-        private string ketqua(string id,string nam)
+        private string ketqua(string id, string nam)
         {
-            if (ketnoicsdl(id, nam) == null)
-            {
-                DataTable tb = ketnoicsdlMa(id);
-                int n = tb.Rows.Count;
-                double sl, a = 0, dudoanM = int.Parse(tb.Rows[0][4].ToString()), dudoanC = int.Parse(tb.Rows[0][4].ToString());               
-                for (int i = 2; i <= n; i++)
-                {                   
-                    sl = int.Parse(tb.Rows[i - 1][4].ToString());                    
-                    dudoanM += (sl - dudoanC);
-                    if (sl - dudoanC != 0)
-                        a += (dudoanM - dudoanC) / (sl - dudoanC);
-                    else
-                        a += 0;
-                    dudoanC = dudoanM;                   
-                }
-                a = a / n;
-                if (a != 0)
-                {
-                    dudoanC = int.Parse(tb.Rows[0][4].ToString());
-                    sl = int.Parse(tb.Rows[1][4].ToString());
-                    for (int i = 2; i <= (int.Parse(nam) - 2013 + 1); i++)
-                    {
-                        dudoanM = dudoanC + a * (sl - dudoanC);
-                        dudoanC = dudoanM;
-                        try
-                        {
-                            sl = int.Parse(tb.Rows[i - 1][4].ToString());
-                        }
-                        catch
-                        {
-                            sl += (dudoanM - dudoanC);
-                        }
-                        
-                    }
-                }
-                return dudoanM.ToString();
-                
-                
-            }
+            if (string.IsNullOrEmpty(id))
+                MessageBox.Show("Chưa nhập mã trường hoặc tên trường");
+            else if (string.IsNullOrEmpty(nam))
+                MessageBox.Show("Chưa nhập năm dự báo");
             else
             {
-                return ketnoicsdl(id,nam);
+                if (ketnoicsdl(id, nam) == null)
+                {
+                    DataTable tb = ketnoicsdlMa(id);
+                    int n = tb.Rows.Count;
+                    double sl, a = 0, dudoanM = int.Parse(tb.Rows[0][4].ToString()), dudoanC = int.Parse(tb.Rows[0][4].ToString());
+                    for (int i = 2; i <= n; i++)
+                    {
+                        sl = int.Parse(tb.Rows[i - 1][4].ToString());
+                        dudoanM += (sl - dudoanC);
+                        if (sl - dudoanC != 0)
+                            a += (dudoanM - dudoanC) / (sl - dudoanC);
+                        else
+                            a += 0;
+                        dudoanC = dudoanM;
+                    }
+                    a = a / n;
+                    if (a != 0)
+                    {
+                        dudoanC = int.Parse(tb.Rows[0][4].ToString());
+                        sl = int.Parse(tb.Rows[1][4].ToString());
+                        for (int i = 2; i <= (int.Parse(nam) - 2013 + 1); i++)
+                        {
+                            dudoanM = dudoanC + a * (sl - dudoanC);
+                            dudoanC = dudoanM;
+                            try
+                            {
+                                sl = int.Parse(tb.Rows[i - 1][4].ToString());
+                            }
+                            catch
+                            {
+                                sl += (dudoanM - dudoanC);
+                            }
+
+                        }
+                    }
+                    return dudoanM.ToString();
+                }
+                else
+                {
+                    return ketnoicsdl(id, nam);
+                }
             }
+            return null;
         }
 
         private void buttonTuVan_Click(object sender, EventArgs e)
@@ -135,13 +141,13 @@ namespace WindowsFormsApplication1
             nam = textBoxNam.Text;
             if (comboBoxTuVan.SelectedIndex == 0)
             {
-                id = textBoxTruong.Text;               
+                id = textBoxTruong.Text;
             }
             else
             {
                 string id1 = textBoxTruong.Text;
                 DataTable tb = ketnoicsdlTen(id1);
-                id = tb.Rows[0][0].ToString();                
+                id = tb.Rows[0][0].ToString();
             }
             labelKetQua.Text = ketqua(id, nam);
         }

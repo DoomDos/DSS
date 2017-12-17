@@ -15,11 +15,11 @@ namespace WindowsFormsApplication1
     {
         public FormTruong()
         {
-            InitializeComponent();            
+            InitializeComponent();
         }
         string sql1;
         private void ketnoicsdl()
-        {            
+        {
             string sql = "select * from Truong";  // Lấy dữ liệu bảng trường            
             dataGridViewTruong.DataSource = ExcuteSql.connectDB(sql); ; //đổ dữ liệu vào datagridview
         }
@@ -27,8 +27,8 @@ namespace WindowsFormsApplication1
         {
 
             string id = dataGridViewTruong.CurrentRow.Cells[0].Value.ToString();
-            
-            var formTuyenSinh = new FormTuyenSinh(id,"");
+
+            var formTuyenSinh = new FormTuyenSinh(id, "");
             formTuyenSinh.ShowDialog();
         }
 
@@ -65,11 +65,11 @@ namespace WindowsFormsApplication1
             {
                 string idDel = dataGridViewTruong.CurrentRow.Cells[0].Value.ToString();
                 string sql = "DELETE FROM Truong WHERE MaTruong ='" + idDel + "'"; //Xóa theo mã trường
-                var confirmResult = MessageBox.Show("Bạn chắc chắn muốn xóa trường "+ dataGridViewTruong.CurrentRow.Cells[1].Value.ToString() +"?",
+                var confirmResult = MessageBox.Show("Bạn chắc chắn muốn xóa trường " + dataGridViewTruong.CurrentRow.Cells[1].Value.ToString() + "?",
                                      "Xóa trường!",
                                      MessageBoxButtons.YesNo);
                 if (confirmResult == DialogResult.Yes)
-                {                    
+                {
                     ExcuteSql.excuteCom(sql);
                     MessageBox.Show("Xóa thành công");
                     resetForm();
@@ -90,15 +90,15 @@ namespace WindowsFormsApplication1
         private void ChildFormClosing(object sender, FormClosingEventArgs e)
         {
             resetForm();
-   
+
         }
 
         private void buttonTimKiem_Click(object sender, EventArgs e)
         {
-            if(comboBoxTimKiem.SelectedIndex == 0)
+            if (comboBoxTimKiem.SelectedIndex == 0)
             {
                 // Tìm kiếm với mã trường
-                sql1 = "select * from Truong where MaTruong like '%" + textBoxTimKiem.Text+"%'";               
+                sql1 = "select * from Truong where MaTruong like '%" + textBoxTimKiem.Text + "%'";
             }
             else
             {
@@ -106,6 +106,21 @@ namespace WindowsFormsApplication1
                 sql1 = "select * from Truong where TenTruong like N'%" + textBoxTimKiem.Text + "%'";
             }
             dataGridViewTruong.DataSource = ExcuteSql.connectDB(sql1); ; //đổ dữ liệu vào datagridview
+        }
+
+        private void textBoxTimKiem_TextChanged(object sender, EventArgs e)
+        {
+            if (comboBoxTimKiem.SelectedIndex == 0)
+            {
+                // Tìm kiếm với mã trường
+                sql1 = "select * from Truong where MaTruong like '%" + textBoxTimKiem.Text + "%'";
+            }
+            else
+            {
+                // Tìm kiếm với tên trường
+                sql1 = "select * from Truong where TenTruong like N'%" + textBoxTimKiem.Text + "%'";
+            }
+            dataGridViewTruong.DataSource = ExcuteSql.connectDB(sql1); ;
         }
     }
 }
