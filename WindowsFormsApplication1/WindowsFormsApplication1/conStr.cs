@@ -14,7 +14,7 @@ namespace WindowsFormsApplication1
 
             // Data Source=DESKTOP-38C3K9H\SQLEXPRESS;Initial Catalog=TuVanTuyenSinh;Persist Security Info=True
 
-            SqlConnection conn = new SqlConnection(@"Data Source=DESKTOP-7U0MIE1\SQLExpress;Initial Catalog=TuVanTuyenSinh;Integrated Security=True");
+            SqlConnection conn = new SqlConnection(@"Data Source=DESKTOP-38C3K9H\SQLEXPRESS;Initial Catalog=TuVanTuyenSinh;Integrated Security=True");
 
             return conn;
         }
