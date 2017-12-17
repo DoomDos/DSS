@@ -113,9 +113,8 @@
             this.labelKetQua.ForeColor = System.Drawing.Color.Red;
             this.labelKetQua.Location = new System.Drawing.Point(399, 270);
             this.labelKetQua.Name = "labelKetQua";
-            this.labelKetQua.Size = new System.Drawing.Size(213, 28);
+            this.labelKetQua.Size = new System.Drawing.Size(0, 28);
             this.labelKetQua.TabIndex = 6;
-            this.labelKetQua.Text = "Đây là kết quả trả về";
             // 
             // buttonDong
             // 

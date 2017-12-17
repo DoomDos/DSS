@@ -43,6 +43,7 @@
             this.SLDaTuyen = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.comboBoxNam = new System.Windows.Forms.ComboBox();
             this.labelNam = new System.Windows.Forms.Label();
+            this.buttonExcel = new System.Windows.Forms.Button();
             this.panelButton.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewTS)).BeginInit();
             this.SuspendLayout();
@@ -50,6 +51,7 @@
             // panelButton
             // 
             this.panelButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(204)))), ((int)(((byte)(255)))));
+            this.panelButton.Controls.Add(this.buttonExcel);
             this.panelButton.Controls.Add(this.buttonDong);
             this.panelButton.Controls.Add(this.buttonXoa);
             this.panelButton.Controls.Add(this.buttonSua);
@@ -65,7 +67,7 @@
             this.buttonDong.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonDong.Font = new System.Drawing.Font("Palatino Linotype", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonDong.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.buttonDong.Location = new System.Drawing.Point(671, 19);
+            this.buttonDong.Location = new System.Drawing.Point(692, 19);
             this.buttonDong.Name = "buttonDong";
             this.buttonDong.Size = new System.Drawing.Size(100, 40);
             this.buttonDong.TabIndex = 4;
@@ -79,7 +81,7 @@
             this.buttonXoa.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonXoa.Font = new System.Drawing.Font("Palatino Linotype", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonXoa.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.buttonXoa.Location = new System.Drawing.Point(542, 19);
+            this.buttonXoa.Location = new System.Drawing.Point(569, 19);
             this.buttonXoa.Name = "buttonXoa";
             this.buttonXoa.Size = new System.Drawing.Size(100, 40);
             this.buttonXoa.TabIndex = 2;
@@ -93,7 +95,7 @@
             this.buttonSua.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonSua.Font = new System.Drawing.Font("Palatino Linotype", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonSua.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.buttonSua.Location = new System.Drawing.Point(416, 19);
+            this.buttonSua.Location = new System.Drawing.Point(454, 19);
             this.buttonSua.Name = "buttonSua";
             this.buttonSua.Size = new System.Drawing.Size(100, 40);
             this.buttonSua.TabIndex = 1;
@@ -108,7 +110,7 @@
             this.buttonThem.Font = new System.Drawing.Font("Palatino Linotype", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonThem.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.buttonThem.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.buttonThem.Location = new System.Drawing.Point(283, 19);
+            this.buttonThem.Location = new System.Drawing.Point(213, 19);
             this.buttonThem.Name = "buttonThem";
             this.buttonThem.Size = new System.Drawing.Size(100, 40);
             this.buttonThem.TabIndex = 0;
@@ -206,6 +208,20 @@
             this.labelNam.TabIndex = 4;
             this.labelNam.Text = "Chọn năm";
             // 
+            // buttonExcel
+            // 
+            this.buttonExcel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(122)))), ((int)(((byte)(153)))));
+            this.buttonExcel.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonExcel.Font = new System.Drawing.Font("Palatino Linotype", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonExcel.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.buttonExcel.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.buttonExcel.Location = new System.Drawing.Point(331, 19);
+            this.buttonExcel.Name = "buttonExcel";
+            this.buttonExcel.Size = new System.Drawing.Size(100, 40);
+            this.buttonExcel.TabIndex = 5;
+            this.buttonExcel.Text = "Tải Excel";
+            this.buttonExcel.UseVisualStyleBackColor = false;
+            // 
             // FormTuyenSinh
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -244,5 +260,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Nam;
         private System.Windows.Forms.DataGridViewTextBoxColumn ChiTieu;
         private System.Windows.Forms.DataGridViewTextBoxColumn SLDaTuyen;
+        private System.Windows.Forms.Button buttonExcel;
     }
 }

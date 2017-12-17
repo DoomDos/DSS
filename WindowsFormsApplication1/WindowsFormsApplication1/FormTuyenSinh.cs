@@ -79,10 +79,9 @@ namespace WindowsFormsApplication1
             comboBoxNam.Items.Clear();
             comboBoxNam.Items.Add("Tất cả");
             string sql = "SELECT DISTINCT TuyenSinh.Nam FROM TuyenSinh ORDER BY TuyenSinh.Nam ASC; ";
-            SqlDataReader dr = ExcuteSql.excuteSqlReader(sql);
-            while (dr.Read())
-                comboBoxNam.Items.Add(dr.GetValue(0));
-            dr.Close();
+            DataTable dt = ExcuteSql.connectDB(sql);
+            for (int i = 0; i < dt.Rows.Count; i++)
+                comboBoxNam.Items.Add(dt.Rows[i][0].ToString());
             this.comboBoxNam.SelectedIndex = 0;
             this.ketnoicsdl(id);
         }

@@ -46,6 +46,7 @@
             this.comboBoxTimKiem = new System.Windows.Forms.ComboBox();
             this.textBoxTimKiem = new System.Windows.Forms.TextBox();
             this.buttonTimKiem = new System.Windows.Forms.Button();
+            this.buttonExcel = new System.Windows.Forms.Button();
             this.panelButton.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewTruong)).BeginInit();
             this.SuspendLayout();
@@ -53,6 +54,7 @@
             // panelButton
             // 
             this.panelButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(204)))), ((int)(((byte)(255)))));
+            this.panelButton.Controls.Add(this.buttonExcel);
             this.panelButton.Controls.Add(this.buttonDong);
             this.panelButton.Controls.Add(this.buttonChitiet);
             this.panelButton.Controls.Add(this.buttonXoa);
@@ -83,7 +85,7 @@
             this.buttonChitiet.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonChitiet.Font = new System.Drawing.Font("Palatino Linotype", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonChitiet.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.buttonChitiet.Location = new System.Drawing.Point(615, 20);
+            this.buttonChitiet.Location = new System.Drawing.Point(628, 20);
             this.buttonChitiet.Name = "buttonChitiet";
             this.buttonChitiet.Size = new System.Drawing.Size(100, 40);
             this.buttonChitiet.TabIndex = 3;
@@ -97,7 +99,7 @@
             this.buttonXoa.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonXoa.Font = new System.Drawing.Font("Palatino Linotype", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonXoa.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.buttonXoa.Location = new System.Drawing.Point(487, 20);
+            this.buttonXoa.Location = new System.Drawing.Point(511, 20);
             this.buttonXoa.Name = "buttonXoa";
             this.buttonXoa.Size = new System.Drawing.Size(100, 40);
             this.buttonXoa.TabIndex = 2;
@@ -111,7 +113,7 @@
             this.buttonSua.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonSua.Font = new System.Drawing.Font("Palatino Linotype", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonSua.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.buttonSua.Location = new System.Drawing.Point(350, 20);
+            this.buttonSua.Location = new System.Drawing.Point(394, 20);
             this.buttonSua.Name = "buttonSua";
             this.buttonSua.Size = new System.Drawing.Size(100, 40);
             this.buttonSua.TabIndex = 1;
@@ -126,7 +128,7 @@
             this.buttonThem.Font = new System.Drawing.Font("Palatino Linotype", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonThem.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.buttonThem.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.buttonThem.Location = new System.Drawing.Point(214, 20);
+            this.buttonThem.Location = new System.Drawing.Point(154, 20);
             this.buttonThem.Name = "buttonThem";
             this.buttonThem.Size = new System.Drawing.Size(100, 40);
             this.buttonThem.TabIndex = 0;
@@ -255,6 +257,20 @@
             this.buttonTimKiem.UseVisualStyleBackColor = false;
             this.buttonTimKiem.Click += new System.EventHandler(this.buttonTimKiem_Click);
             // 
+            // buttonExcel
+            // 
+            this.buttonExcel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(122)))), ((int)(((byte)(153)))));
+            this.buttonExcel.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonExcel.Font = new System.Drawing.Font("Palatino Linotype", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonExcel.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.buttonExcel.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.buttonExcel.Location = new System.Drawing.Point(277, 20);
+            this.buttonExcel.Name = "buttonExcel";
+            this.buttonExcel.Size = new System.Drawing.Size(100, 40);
+            this.buttonExcel.TabIndex = 5;
+            this.buttonExcel.Text = "Tải Excel";
+            this.buttonExcel.UseVisualStyleBackColor = false;
+            // 
             // FormTruong
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -298,5 +314,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn DiaChi;
         private System.Windows.Forms.DataGridViewTextBoxColumn Website;
         private System.Windows.Forms.DataGridViewTextBoxColumn BQL;
+        private System.Windows.Forms.Button buttonExcel;
     }
 }

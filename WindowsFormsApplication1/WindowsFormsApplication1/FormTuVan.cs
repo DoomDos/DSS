@@ -19,24 +19,36 @@ namespace WindowsFormsApplication1
         }
         string id;
         string nam;
+        string loi = "Lỗi";
         private string ketnoicsdl(string id, string nam)
         {
             // Lấy dữ liệu trường theo mã trường
             string sql = "select Truong.TenTruong, TuyenSinh.* from Truong,TuyenSinh where TuyenSinh.MaTruong='" + id + "' AND Truong.MaTruong='" + id + "' AND TuyenSinh.Nam = '" + nam + "'";
-            DataTable thamchieu = ExcuteSql.connectDB(sql);
-            if (thamchieu.Rows.Count == 0)
+            try
             {
-                return null;
+                DataTable thamchieu = ExcuteSql.connectDB(sql);
+
+                if (thamchieu.Rows.Count == 0)
+                {
+                    return null;
+                }
+                else
+                {
+                    return thamchieu.Rows[0][4].ToString();
+                }
             }
-            else
+            catch
             {
-                return thamchieu.Rows[0][4].ToString();
+                MessageBox.Show("Thông tin nhập không hợp lệ");
+                return loi;
             }
+
         }
         private DataTable ketnoicsdlMa(string id)
         {
             string sql = "select Truong.TenTruong, TuyenSinh.* from Truong,TuyenSinh where TuyenSinh.MaTruong='" + id + "' AND Truong.MaTruong='" + id + "'";
             return ExcuteSql.connectDB(sql);
+            
         }
         private DataTable ketnoicsdlTen(string id)
         {
@@ -85,52 +97,63 @@ namespace WindowsFormsApplication1
         }
         private string ketqua(string id, string nam)
         {
-            if (string.IsNullOrEmpty(id))
+            if(string.IsNullOrEmpty(id) && string.IsNullOrEmpty(nam))
+                MessageBox.Show("Chưa nhập đủ thông tin để tư vấn");
+            else if (string.IsNullOrEmpty(id))
                 MessageBox.Show("Chưa nhập mã trường hoặc tên trường");
             else if (string.IsNullOrEmpty(nam))
                 MessageBox.Show("Chưa nhập năm dự báo");
             else
             {
-                if (ketnoicsdl(id, nam) == null)
+                String ketqua = ketnoicsdl(id, nam);
+                if (ketqua == null)
                 {
                     DataTable tb = ketnoicsdlMa(id);
-                    int n = tb.Rows.Count;
-                    double sl, a = 0, dudoanM = int.Parse(tb.Rows[0][4].ToString()), dudoanC = int.Parse(tb.Rows[0][4].ToString());
-                    for (int i = 2; i <= n; i++)
+                    if (tb.Rows.Count != 0)
                     {
-                        sl = int.Parse(tb.Rows[i - 1][4].ToString());
-                        dudoanM += (sl - dudoanC);
-                        if (sl - dudoanC != 0)
-                            a += (dudoanM - dudoanC) / (sl - dudoanC);
-                        else
-                            a += 0;
-                        dudoanC = dudoanM;
-                    }
-                    a = a / n;
-                    if (a != 0)
-                    {
-                        dudoanC = int.Parse(tb.Rows[0][4].ToString());
-                        sl = int.Parse(tb.Rows[1][4].ToString());
-                        for (int i = 2; i <= (int.Parse(nam) - 2013 + 1); i++)
+                        int n = tb.Rows.Count;
+                        double sl, a = 0, dudoanM = int.Parse(tb.Rows[0][4].ToString()), dudoanC = int.Parse(tb.Rows[0][4].ToString());
+                        for (int i = 2; i <= n; i++)
                         {
-                            dudoanM = dudoanC + a * (sl - dudoanC);
+                            sl = int.Parse(tb.Rows[i - 1][4].ToString());
+                            dudoanM += (sl - dudoanC);
+                            if (sl - dudoanC != 0)
+                                a += (dudoanM - dudoanC) / (sl - dudoanC);
+                            else
+                                a += 0;
                             dudoanC = dudoanM;
-                            try
-                            {
-                                sl = int.Parse(tb.Rows[i - 1][4].ToString());
-                            }
-                            catch
-                            {
-                                sl += (dudoanM - dudoanC);
-                            }
-
                         }
+                        a = a / n;
+                        if (a != 0)
+                        {
+                            dudoanC = int.Parse(tb.Rows[0][4].ToString());
+                            sl = int.Parse(tb.Rows[1][4].ToString());
+                            for (int i = 2; i <= (int.Parse(nam) - 2013 + 1); i++)
+                            {
+                                dudoanM = dudoanC + a * (sl - dudoanC);
+                                dudoanC = dudoanM;
+                                try
+                                {
+                                    sl = int.Parse(tb.Rows[i - 1][4].ToString());
+                                }
+                                catch
+                                {
+                                    sl += (dudoanM - dudoanC);
+                                }
+
+                            }
+                        }
+                        return dudoanM.ToString();
                     }
-                    return dudoanM.ToString();
+                    else
+                    {
+                        MessageBox.Show("Không tìm thấy Trường như yêu cầu.");
+                        return null;
+                    }
                 }
-                else
+                else if( ketqua != loi)
                 {
-                    return ketnoicsdl(id, nam);
+                    return ketqua;
                 }
             }
             return null;
